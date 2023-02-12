@@ -1,0 +1,691 @@
+\hypertarget{users_8c}{}\doxysection{/home/matilde/\+Desktop/grupo-\/18/trabalho-\/pratico/src/users.c File Reference}
+\label{users_8c}\index{/home/matilde/Desktop/grupo-\/18/trabalho-\/pratico/src/users.c@{/home/matilde/Desktop/grupo-\/18/trabalho-\/pratico/src/users.c}}
+{\ttfamily \#include \char`\"{}../include/users.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structuser}{user}}
+\begin{DoxyCompactList}\small\item\em Type usado para definir um user. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structuser__ht}{user\+\_\+ht}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{users_8c_a1e2e152d4d4eec649dd7e4aacd6add90}\label{users_8c_a1e2e152d4d4eec649dd7e4aacd6add90}} 
+\#define {\bfseries FREE}(algo)~if (algo) free(algo)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{users_8c_a5d896d6163fa063d64dc41900eb82b89}{set\+Username}} (User \mbox{\hyperlink{structuser}{user}}, char $\ast$usr)
+\begin{DoxyCompactList}\small\item\em Define o username do \#\+User. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{users_8c_a40bd7806f70eb1a63153571a5922205f}{get\+Username}} (User \mbox{\hyperlink{structuser}{user}})
+\begin{DoxyCompactList}\small\item\em Obtém o username de um \#\+User. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{users_8c_a4d26c0db88a29b81b65f5aaccba2dc21}{set\+User\+XName}} (User \mbox{\hyperlink{structuser}{user}}, char $\ast$nm)
+\begin{DoxyCompactList}\small\item\em Define o nome do \#\+User. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{users_8c_adf1c4665952972d473878dc58e402724}{get\+User\+XName}} (User \mbox{\hyperlink{structuser}{user}})
+\begin{DoxyCompactList}\small\item\em Obtém o nome de um \#\+User. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{users_8c_a33cd3a10cc149718aa4050e15d4ed65a}{valid\+User\+Gender}} (char gndr)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que verifica se o género é válido. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{users_8c_abb1193e1836185f3ba55cfae62df9400}{set\+User\+Gender}} (User \mbox{\hyperlink{structuser}{user}}, char gndr)
+\begin{DoxyCompactList}\small\item\em Define o género de um \#\+User. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{users_8c_a5158d28238db2c5c29a0c3833885b1ec}{get\+User\+Gender}} (User \mbox{\hyperlink{structuser}{user}})
+\begin{DoxyCompactList}\small\item\em Obtém o género de um \#\+User. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{users_8c_ab621b54eeac464db697421d1efdd0dd9}{set\+Birth\+Date}} (User \mbox{\hyperlink{structuser}{user}}, Date \mbox{\hyperlink{structdate}{date}})
+\begin{DoxyCompactList}\small\item\em Define a data de nasimento de um \#\+User. \end{DoxyCompactList}\item 
+Date \mbox{\hyperlink{users_8c_a95ec2b0223bd0d5fec45f833986e1223}{get\+Birth\+Date}} (User \mbox{\hyperlink{structuser}{user}})
+\begin{DoxyCompactList}\small\item\em Obtém a data de nascimento de um \#\+User. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{users_8c_acdde7804699e9836a7456f0e5a1bfce6}{set\+User\+Account\+Creation}} (User \mbox{\hyperlink{structuser}{user}}, Date \mbox{\hyperlink{structdate}{date}})
+\begin{DoxyCompactList}\small\item\em Define a data em que a conta de um \#\+User foi criada. \end{DoxyCompactList}\item 
+Date \mbox{\hyperlink{users_8c_afd65059ee98be528bd3ed71ba8b1940c}{get\+User\+Account\+Creation}} (User \mbox{\hyperlink{structuser}{user}})
+\begin{DoxyCompactList}\small\item\em Obtém a data em que a conta de um \#\+User foi criada. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{users_8c_ade28daa8c9f134ac425e8c3f419dd19e}{valid\+Pay\+Method}} (char $\ast$pm)
+\begin{DoxyCompactList}\small\item\em Função auxiliar com função de verificar se o método de pagamento é válido. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{users_8c_acc139b3e2796133ce5057f450722e87d}{set\+Pay\+Method}} (User \mbox{\hyperlink{structuser}{user}}, char $\ast$pm)
+\begin{DoxyCompactList}\small\item\em Define o método de pagamento de um \#\+User. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{users_8c_a71fa9242a9c2479e10e9913c3a079c3a}{get\+Pay\+Method}} (User \mbox{\hyperlink{structuser}{user}})
+\begin{DoxyCompactList}\small\item\em Obtém o método de pagamento de um \#\+User. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{users_8c_a716106e2a5aad8d2ac47364756f2e0c6}{valid\+User\+Account\+Status}} (char $\ast$as)
+\begin{DoxyCompactList}\small\item\em Função auxiliar com função de verificar se o account status é válido. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{users_8c_a2122de8501e504f974682df0e361a32a}{set\+User\+Account\+Status}} (User \mbox{\hyperlink{structuser}{user}}, char $\ast$as)
+\begin{DoxyCompactList}\small\item\em Define o estado da conta de um \#\+User. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{users_8c_a49aca3430c77b3cc5d9aecd76b9b0a6c}{get\+User\+Account\+Status}} (User \mbox{\hyperlink{structuser}{user}})
+\begin{DoxyCompactList}\small\item\em Obtém o estado da conta de um \#\+User. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{users_8c_ab7a09d33a0d6883718a2d1e4b5341669}{set\+Total\+\_\+gasto}} (User \mbox{\hyperlink{structuser}{user}}, double t)
+\begin{DoxyCompactList}\small\item\em Define o total gasto de um dado \#\+User. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{users_8c_ae6f37a15580cd875d1327e9554ce66af}{get\+Total\+\_\+gasto}} (User \mbox{\hyperlink{structuser}{user}})
+\begin{DoxyCompactList}\small\item\em Obtém o total gasto de um dado \#\+User. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{users_8c_ac1d78815e83588e35336a7227bcb16e7}{set\+Score\+\_\+u}} (User \mbox{\hyperlink{structuser}{user}}, double t)
+\begin{DoxyCompactList}\small\item\em Define o score total do \#\+User. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{users_8c_aa2c7d9e906b141a45cb89006567d0ab1}{get\+Score\+\_\+u}} (User \mbox{\hyperlink{structuser}{user}})
+\begin{DoxyCompactList}\small\item\em Obtém o score total do \#\+User. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{users_8c_a3f6c1ea7a909e746f92351cbd70d41ac}{setn\+\_\+viagensU}} (User \mbox{\hyperlink{structuser}{user}}, double t)
+\begin{DoxyCompactList}\small\item\em Define o número de viagens do \#\+User. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{users_8c_a595abffe7929a232d9ff9b27cd83b732}{getn\+\_\+viagensU}} (User \mbox{\hyperlink{structuser}{user}})
+\begin{DoxyCompactList}\small\item\em Obtém o número de viagens do \#\+User. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{users_8c_a4ec8cf5bb076f359a54a1b174d1e72c8}{set\+Dist\+\_\+t}} (User \mbox{\hyperlink{structuser}{user}}, int t)
+\begin{DoxyCompactList}\small\item\em Define a distância percorrida por um dado \#\+User. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{users_8c_a93d8d23922ffb0e8ab190458bd3d118c}{get\+Dist\+\_\+t}} (User \mbox{\hyperlink{structuser}{user}})
+\begin{DoxyCompactList}\small\item\em Obtém a distância percorrida por um dado \#\+User. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{users_8c_a55afefc47f7e839a1c753764e3e9c389}{set\+V\+\_\+recenteU}} (User \mbox{\hyperlink{structuser}{user}}, Date \mbox{\hyperlink{structdate}{date}})
+\begin{DoxyCompactList}\small\item\em Define a viagem mais recente do \#\+User. \end{DoxyCompactList}\item 
+Date \mbox{\hyperlink{users_8c_acea63299c60f1ed27e46f395de281f84}{get\+V\+\_\+recenteU}} (User \mbox{\hyperlink{structuser}{user}})
+\begin{DoxyCompactList}\small\item\em Obtém a viagem mais recente do \#\+Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{users_8c_add0af28d80d416c154dd9c6de9dd08bb}{delete\+\_\+user}} (void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Liberta a memória ocupada por cada campo do User (username, name, pay\+\_\+method, account\+\_\+status) e, no fim, ao próprio u. \end{DoxyCompactList}\item 
+User \mbox{\hyperlink{users_8c_a200f8631b49d3331dac384bdd193a731}{build\+\_\+user}} (char $\ast$line)
+\begin{DoxyCompactList}\small\item\em Verifica se um dado \#\+User tem todos os parametros válidos. \end{DoxyCompactList}\item 
+USER\+\_\+\+HT $\ast$ \mbox{\hyperlink{users_8c_a03900359af3d1760eb294065a37fd53e}{create\+\_\+\+User\+Ht}} (char $\ast$ficheiro\+\_\+entrada)
+\begin{DoxyCompactList}\small\item\em função capaz de colocar todos os users válidos numa hashtable \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{users_8c_a22dbde7c8bf1e32f3722204f3e182a10}{delete\+\_\+users\+\_\+hash}} (USER\+\_\+\+HT $\ast$lista)
+\begin{DoxyCompactList}\small\item\em Funcão auxiliar liberta da memória a hashtable dos users. \end{DoxyCompactList}\item 
+User \mbox{\hyperlink{users_8c_a5944ffad8214f943a0d7ba8610397ce3}{q1u}} (USER\+\_\+\+HT $\ast$lista, char $\ast$username)
+\begin{DoxyCompactList}\small\item\em Função que acede à hastable dos users e devolve as informações sobre um user a partir do username do mesmo. \end{DoxyCompactList}\item 
+gint \mbox{\hyperlink{users_8c_ab9ff02b57aab23a1fb760020a1bd9489}{compare\+\_\+dist}} (gconstpointer a, gconstpointer b)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que compara dois users com base nas distâncias percorridas. \end{DoxyCompactList}\item 
+GList $\ast$ \mbox{\hyperlink{users_8c_ac96b16d5d13dd8e2c3f80b6d56a47677}{sort\+\_\+\+\_\+dist\+\_\+t}} (USER\+\_\+\+HT $\ast$table)
+\begin{DoxyCompactList}\small\item\em Funcão auxiliar que transforma a hashtable numa lista ligada e ordena-\/a por ordem descrescente da distância percorrida. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Este ficheiro contém a struct dos users, a função que cria um user válido e a hashtabel com os users válidos 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{users_8c_a200f8631b49d3331dac384bdd193a731}\label{users_8c_a200f8631b49d3331dac384bdd193a731}} 
+\index{users.c@{users.c}!build\_user@{build\_user}}
+\index{build\_user@{build\_user}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{build\_user()}{build\_user()}}
+{\footnotesize\ttfamily User build\+\_\+user (\begin{DoxyParamCaption}\item[{char $\ast$}]{line }\end{DoxyParamCaption})}
+
+
+
+Verifica se um dado \#\+User tem todos os parametros válidos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & string com os paremetros de um \#\+User\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O \#\+User caso todos os parametros sejam válidos e NULL caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{users_8c_ab9ff02b57aab23a1fb760020a1bd9489}\label{users_8c_ab9ff02b57aab23a1fb760020a1bd9489}} 
+\index{users.c@{users.c}!compare\_dist@{compare\_dist}}
+\index{compare\_dist@{compare\_dist}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{compare\_dist()}{compare\_dist()}}
+{\footnotesize\ttfamily gint compare\+\_\+dist (\begin{DoxyParamCaption}\item[{gconstpointer}]{a,  }\item[{gconstpointer}]{b }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que compara dois users com base nas distâncias percorridas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Um pointer para o primeiro user\\
+\hline
+{\em b} & Um pointer para o primeiro user\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Se o output for positivo, isso significa que o user \char`\"{}b\char`\"{} tem uma distância total maior que o user \char`\"{}a\char`\"{} Se o output for zero, significa que ambos os users têm a mesma distância total Se o output for negativo, significa que o user \char`\"{}a\char`\"{} tem uma distância total maior que o user \char`\"{}b\char`\"{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{users_8c_a03900359af3d1760eb294065a37fd53e}\label{users_8c_a03900359af3d1760eb294065a37fd53e}} 
+\index{users.c@{users.c}!create\_UserHt@{create\_UserHt}}
+\index{create\_UserHt@{create\_UserHt}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{create\_UserHt()}{create\_UserHt()}}
+{\footnotesize\ttfamily USER\+\_\+\+HT $\ast$ create\+\_\+\+User\+Ht (\begin{DoxyParamCaption}\item[{char $\ast$}]{ficheiro\+\_\+entrada }\end{DoxyParamCaption})}
+
+
+
+função capaz de colocar todos os users válidos numa hashtable 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ficheiro\+\_\+entrada} & path para o ficheiro que se vai abrir para ser lido\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hashtable com os users 
+\end{DoxyReturn}
+\mbox{\Hypertarget{users_8c_add0af28d80d416c154dd9c6de9dd08bb}\label{users_8c_add0af28d80d416c154dd9c6de9dd08bb}} 
+\index{users.c@{users.c}!delete\_user@{delete\_user}}
+\index{delete\_user@{delete\_user}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{delete\_user()}{delete\_user()}}
+{\footnotesize\ttfamily void delete\+\_\+user (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Liberta a memória ocupada por cada campo do User (username, name, pay\+\_\+method, account\+\_\+status) e, no fim, ao próprio u. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer \char`\"{}data\char`\"{} associado a um User \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{users_8c_a22dbde7c8bf1e32f3722204f3e182a10}\label{users_8c_a22dbde7c8bf1e32f3722204f3e182a10}} 
+\index{users.c@{users.c}!delete\_users\_hash@{delete\_users\_hash}}
+\index{delete\_users\_hash@{delete\_users\_hash}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{delete\_users\_hash()}{delete\_users\_hash()}}
+{\footnotesize\ttfamily void delete\+\_\+users\+\_\+hash (\begin{DoxyParamCaption}\item[{USER\+\_\+\+HT $\ast$}]{lista }\end{DoxyParamCaption})}
+
+
+
+Funcão auxiliar liberta da memória a hashtable dos users. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) dos users \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{users_8c_a95ec2b0223bd0d5fec45f833986e1223}\label{users_8c_a95ec2b0223bd0d5fec45f833986e1223}} 
+\index{users.c@{users.c}!getBirthDate@{getBirthDate}}
+\index{getBirthDate@{getBirthDate}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{getBirthDate()}{getBirthDate()}}
+{\footnotesize\ttfamily Date get\+Birth\+Date (\begin{DoxyParamCaption}\item[{User}]{user }\end{DoxyParamCaption})}
+
+
+
+Obtém a data de nascimento de um \#\+User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & O \#\+User dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A data de nascimento do \#\+User 
+\end{DoxyReturn}
+\mbox{\Hypertarget{users_8c_a93d8d23922ffb0e8ab190458bd3d118c}\label{users_8c_a93d8d23922ffb0e8ab190458bd3d118c}} 
+\index{users.c@{users.c}!getDist\_t@{getDist\_t}}
+\index{getDist\_t@{getDist\_t}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{getDist\_t()}{getDist\_t()}}
+{\footnotesize\ttfamily int get\+Dist\+\_\+t (\begin{DoxyParamCaption}\item[{User}]{user }\end{DoxyParamCaption})}
+
+
+
+Obtém a distância percorrida por um dado \#\+User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & O \#\+User dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A distâmcia percorrida pelo \#\+User 
+\end{DoxyReturn}
+\mbox{\Hypertarget{users_8c_a595abffe7929a232d9ff9b27cd83b732}\label{users_8c_a595abffe7929a232d9ff9b27cd83b732}} 
+\index{users.c@{users.c}!getn\_viagensU@{getn\_viagensU}}
+\index{getn\_viagensU@{getn\_viagensU}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{getn\_viagensU()}{getn\_viagensU()}}
+{\footnotesize\ttfamily int getn\+\_\+viagensU (\begin{DoxyParamCaption}\item[{User}]{user }\end{DoxyParamCaption})}
+
+
+
+Obtém o número de viagens do \#\+User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & O \#\+User dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de viagens do \#\+User 
+\end{DoxyReturn}
+\mbox{\Hypertarget{users_8c_a71fa9242a9c2479e10e9913c3a079c3a}\label{users_8c_a71fa9242a9c2479e10e9913c3a079c3a}} 
+\index{users.c@{users.c}!getPayMethod@{getPayMethod}}
+\index{getPayMethod@{getPayMethod}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{getPayMethod()}{getPayMethod()}}
+{\footnotesize\ttfamily char $\ast$ get\+Pay\+Method (\begin{DoxyParamCaption}\item[{User}]{user }\end{DoxyParamCaption})}
+
+
+
+Obtém o método de pagamento de um \#\+User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & O \#\+User dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O método de pagamento do \#\+User 
+\end{DoxyReturn}
+\mbox{\Hypertarget{users_8c_aa2c7d9e906b141a45cb89006567d0ab1}\label{users_8c_aa2c7d9e906b141a45cb89006567d0ab1}} 
+\index{users.c@{users.c}!getScore\_u@{getScore\_u}}
+\index{getScore\_u@{getScore\_u}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{getScore\_u()}{getScore\_u()}}
+{\footnotesize\ttfamily double get\+Score\+\_\+u (\begin{DoxyParamCaption}\item[{User}]{user }\end{DoxyParamCaption})}
+
+
+
+Obtém o score total do \#\+User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & O \#\+User dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O score total do \#\+User 
+\end{DoxyReturn}
+\mbox{\Hypertarget{users_8c_ae6f37a15580cd875d1327e9554ce66af}\label{users_8c_ae6f37a15580cd875d1327e9554ce66af}} 
+\index{users.c@{users.c}!getTotal\_gasto@{getTotal\_gasto}}
+\index{getTotal\_gasto@{getTotal\_gasto}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{getTotal\_gasto()}{getTotal\_gasto()}}
+{\footnotesize\ttfamily double get\+Total\+\_\+gasto (\begin{DoxyParamCaption}\item[{User}]{user }\end{DoxyParamCaption})}
+
+
+
+Obtém o total gasto de um dado \#\+User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & O \#\+User dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O total gasto do \#\+User 
+\end{DoxyReturn}
+\mbox{\Hypertarget{users_8c_afd65059ee98be528bd3ed71ba8b1940c}\label{users_8c_afd65059ee98be528bd3ed71ba8b1940c}} 
+\index{users.c@{users.c}!getUserAccountCreation@{getUserAccountCreation}}
+\index{getUserAccountCreation@{getUserAccountCreation}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{getUserAccountCreation()}{getUserAccountCreation()}}
+{\footnotesize\ttfamily Date get\+User\+Account\+Creation (\begin{DoxyParamCaption}\item[{User}]{user }\end{DoxyParamCaption})}
+
+
+
+Obtém a data em que a conta de um \#\+User foi criada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & O \#\+User dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A data de criação da conta do \#\+User 
+\end{DoxyReturn}
+\mbox{\Hypertarget{users_8c_a49aca3430c77b3cc5d9aecd76b9b0a6c}\label{users_8c_a49aca3430c77b3cc5d9aecd76b9b0a6c}} 
+\index{users.c@{users.c}!getUserAccountStatus@{getUserAccountStatus}}
+\index{getUserAccountStatus@{getUserAccountStatus}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{getUserAccountStatus()}{getUserAccountStatus()}}
+{\footnotesize\ttfamily char $\ast$ get\+User\+Account\+Status (\begin{DoxyParamCaption}\item[{User}]{user }\end{DoxyParamCaption})}
+
+
+
+Obtém o estado da conta de um \#\+User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & O \#\+User dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O estado da conta do \#\+User 
+\end{DoxyReturn}
+\mbox{\Hypertarget{users_8c_a5158d28238db2c5c29a0c3833885b1ec}\label{users_8c_a5158d28238db2c5c29a0c3833885b1ec}} 
+\index{users.c@{users.c}!getUserGender@{getUserGender}}
+\index{getUserGender@{getUserGender}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{getUserGender()}{getUserGender()}}
+{\footnotesize\ttfamily char get\+User\+Gender (\begin{DoxyParamCaption}\item[{User}]{user }\end{DoxyParamCaption})}
+
+
+
+Obtém o género de um \#\+User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & O \#\+User dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O género do \#\+User 
+\end{DoxyReturn}
+\mbox{\Hypertarget{users_8c_a40bd7806f70eb1a63153571a5922205f}\label{users_8c_a40bd7806f70eb1a63153571a5922205f}} 
+\index{users.c@{users.c}!getUsername@{getUsername}}
+\index{getUsername@{getUsername}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{getUsername()}{getUsername()}}
+{\footnotesize\ttfamily char $\ast$ get\+Username (\begin{DoxyParamCaption}\item[{User}]{user }\end{DoxyParamCaption})}
+
+
+
+Obtém o username de um \#\+User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & O \#\+User dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O username do \#\+User 
+\end{DoxyReturn}
+\mbox{\Hypertarget{users_8c_adf1c4665952972d473878dc58e402724}\label{users_8c_adf1c4665952972d473878dc58e402724}} 
+\index{users.c@{users.c}!getUserXName@{getUserXName}}
+\index{getUserXName@{getUserXName}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{getUserXName()}{getUserXName()}}
+{\footnotesize\ttfamily char $\ast$ get\+User\+XName (\begin{DoxyParamCaption}\item[{User}]{user }\end{DoxyParamCaption})}
+
+
+
+Obtém o nome de um \#\+User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & O \#\+User dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O nome do \#\+User 
+\end{DoxyReturn}
+\mbox{\Hypertarget{users_8c_acea63299c60f1ed27e46f395de281f84}\label{users_8c_acea63299c60f1ed27e46f395de281f84}} 
+\index{users.c@{users.c}!getV\_recenteU@{getV\_recenteU}}
+\index{getV\_recenteU@{getV\_recenteU}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{getV\_recenteU()}{getV\_recenteU()}}
+{\footnotesize\ttfamily Date get\+V\+\_\+recenteU (\begin{DoxyParamCaption}\item[{User}]{user }\end{DoxyParamCaption})}
+
+
+
+Obtém a viagem mais recente do \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & O \#\+User dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A data da viagem mais recente do \#\+Driver 
+\end{DoxyReturn}
+\mbox{\Hypertarget{users_8c_a5944ffad8214f943a0d7ba8610397ce3}\label{users_8c_a5944ffad8214f943a0d7ba8610397ce3}} 
+\index{users.c@{users.c}!q1u@{q1u}}
+\index{q1u@{q1u}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{q1u()}{q1u()}}
+{\footnotesize\ttfamily User q1u (\begin{DoxyParamCaption}\item[{USER\+\_\+\+HT $\ast$}]{lista,  }\item[{char $\ast$}]{username }\end{DoxyParamCaption})}
+
+
+
+Função que acede à hastable dos users e devolve as informações sobre um user a partir do username do mesmo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) dos users \\
+\hline
+{\em username} & username de um user\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+user associado ao username dado no input 
+\end{DoxyReturn}
+\mbox{\Hypertarget{users_8c_ab621b54eeac464db697421d1efdd0dd9}\label{users_8c_ab621b54eeac464db697421d1efdd0dd9}} 
+\index{users.c@{users.c}!setBirthDate@{setBirthDate}}
+\index{setBirthDate@{setBirthDate}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{setBirthDate()}{setBirthDate()}}
+{\footnotesize\ttfamily void set\+Birth\+Date (\begin{DoxyParamCaption}\item[{User}]{user,  }\item[{Date}]{date }\end{DoxyParamCaption})}
+
+
+
+Define a data de nasimento de um \#\+User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & O \#\+User dado \\
+\hline
+{\em date} & A data de nascimento do \#\+User \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{users_8c_a4ec8cf5bb076f359a54a1b174d1e72c8}\label{users_8c_a4ec8cf5bb076f359a54a1b174d1e72c8}} 
+\index{users.c@{users.c}!setDist\_t@{setDist\_t}}
+\index{setDist\_t@{setDist\_t}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{setDist\_t()}{setDist\_t()}}
+{\footnotesize\ttfamily void set\+Dist\+\_\+t (\begin{DoxyParamCaption}\item[{User}]{user,  }\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Define a distância percorrida por um dado \#\+User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & O \#\+User dado \\
+\hline
+{\em t} & Distâmcia percorrida pelo \#\+User \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{users_8c_a3f6c1ea7a909e746f92351cbd70d41ac}\label{users_8c_a3f6c1ea7a909e746f92351cbd70d41ac}} 
+\index{users.c@{users.c}!setn\_viagensU@{setn\_viagensU}}
+\index{setn\_viagensU@{setn\_viagensU}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{setn\_viagensU()}{setn\_viagensU()}}
+{\footnotesize\ttfamily void setn\+\_\+viagensU (\begin{DoxyParamCaption}\item[{User}]{user,  }\item[{double}]{t }\end{DoxyParamCaption})}
+
+
+
+Define o número de viagens do \#\+User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & O \#\+User dado \\
+\hline
+{\em t} & O número de viagens do \#\+User \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{users_8c_acc139b3e2796133ce5057f450722e87d}\label{users_8c_acc139b3e2796133ce5057f450722e87d}} 
+\index{users.c@{users.c}!setPayMethod@{setPayMethod}}
+\index{setPayMethod@{setPayMethod}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{setPayMethod()}{setPayMethod()}}
+{\footnotesize\ttfamily void set\+Pay\+Method (\begin{DoxyParamCaption}\item[{User}]{user,  }\item[{char $\ast$}]{pm }\end{DoxyParamCaption})}
+
+
+
+Define o método de pagamento de um \#\+User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & O \#\+User dado \\
+\hline
+{\em pm} & O método de pagamento do \#\+User \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{users_8c_ac1d78815e83588e35336a7227bcb16e7}\label{users_8c_ac1d78815e83588e35336a7227bcb16e7}} 
+\index{users.c@{users.c}!setScore\_u@{setScore\_u}}
+\index{setScore\_u@{setScore\_u}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{setScore\_u()}{setScore\_u()}}
+{\footnotesize\ttfamily void set\+Score\+\_\+u (\begin{DoxyParamCaption}\item[{User}]{user,  }\item[{double}]{t }\end{DoxyParamCaption})}
+
+
+
+Define o score total do \#\+User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & O \#\+User dado \\
+\hline
+{\em t} & O score total do \#\+User \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{users_8c_ab7a09d33a0d6883718a2d1e4b5341669}\label{users_8c_ab7a09d33a0d6883718a2d1e4b5341669}} 
+\index{users.c@{users.c}!setTotal\_gasto@{setTotal\_gasto}}
+\index{setTotal\_gasto@{setTotal\_gasto}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{setTotal\_gasto()}{setTotal\_gasto()}}
+{\footnotesize\ttfamily void set\+Total\+\_\+gasto (\begin{DoxyParamCaption}\item[{User}]{user,  }\item[{double}]{t }\end{DoxyParamCaption})}
+
+
+
+Define o total gasto de um dado \#\+User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & O \#\+User dado \\
+\hline
+{\em t} & Total gasto do \#\+User \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{users_8c_acdde7804699e9836a7456f0e5a1bfce6}\label{users_8c_acdde7804699e9836a7456f0e5a1bfce6}} 
+\index{users.c@{users.c}!setUserAccountCreation@{setUserAccountCreation}}
+\index{setUserAccountCreation@{setUserAccountCreation}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{setUserAccountCreation()}{setUserAccountCreation()}}
+{\footnotesize\ttfamily void set\+User\+Account\+Creation (\begin{DoxyParamCaption}\item[{User}]{user,  }\item[{Date}]{date }\end{DoxyParamCaption})}
+
+
+
+Define a data em que a conta de um \#\+User foi criada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & O \#\+User dado \\
+\hline
+{\em date} & A data da criação da conta do \#\+User \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{users_8c_a2122de8501e504f974682df0e361a32a}\label{users_8c_a2122de8501e504f974682df0e361a32a}} 
+\index{users.c@{users.c}!setUserAccountStatus@{setUserAccountStatus}}
+\index{setUserAccountStatus@{setUserAccountStatus}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{setUserAccountStatus()}{setUserAccountStatus()}}
+{\footnotesize\ttfamily void set\+User\+Account\+Status (\begin{DoxyParamCaption}\item[{User}]{user,  }\item[{char $\ast$}]{as }\end{DoxyParamCaption})}
+
+
+
+Define o estado da conta de um \#\+User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & O \#\+User dado \\
+\hline
+{\em as} & O estado da conta do \#\+User \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{users_8c_abb1193e1836185f3ba55cfae62df9400}\label{users_8c_abb1193e1836185f3ba55cfae62df9400}} 
+\index{users.c@{users.c}!setUserGender@{setUserGender}}
+\index{setUserGender@{setUserGender}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{setUserGender()}{setUserGender()}}
+{\footnotesize\ttfamily void set\+User\+Gender (\begin{DoxyParamCaption}\item[{User}]{user,  }\item[{char}]{gndr }\end{DoxyParamCaption})}
+
+
+
+Define o género de um \#\+User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & O \#\+User dado \\
+\hline
+{\em gndr} & O género do \#\+User \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{users_8c_a5d896d6163fa063d64dc41900eb82b89}\label{users_8c_a5d896d6163fa063d64dc41900eb82b89}} 
+\index{users.c@{users.c}!setUsername@{setUsername}}
+\index{setUsername@{setUsername}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{setUsername()}{setUsername()}}
+{\footnotesize\ttfamily void set\+Username (\begin{DoxyParamCaption}\item[{User}]{user,  }\item[{char $\ast$}]{usr }\end{DoxyParamCaption})}
+
+
+
+Define o username do \#\+User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & O \#\+User dado \\
+\hline
+{\em usr} & O username do \#\+User \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{users_8c_a4d26c0db88a29b81b65f5aaccba2dc21}\label{users_8c_a4d26c0db88a29b81b65f5aaccba2dc21}} 
+\index{users.c@{users.c}!setUserXName@{setUserXName}}
+\index{setUserXName@{setUserXName}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{setUserXName()}{setUserXName()}}
+{\footnotesize\ttfamily void set\+User\+XName (\begin{DoxyParamCaption}\item[{User}]{user,  }\item[{char $\ast$}]{nm }\end{DoxyParamCaption})}
+
+
+
+Define o nome do \#\+User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & O \#\+User dado \\
+\hline
+{\em nm} & O nome do \#\+User \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{users_8c_a55afefc47f7e839a1c753764e3e9c389}\label{users_8c_a55afefc47f7e839a1c753764e3e9c389}} 
+\index{users.c@{users.c}!setV\_recenteU@{setV\_recenteU}}
+\index{setV\_recenteU@{setV\_recenteU}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{setV\_recenteU()}{setV\_recenteU()}}
+{\footnotesize\ttfamily void set\+V\+\_\+recenteU (\begin{DoxyParamCaption}\item[{User}]{user,  }\item[{Date}]{date }\end{DoxyParamCaption})}
+
+
+
+Define a viagem mais recente do \#\+User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & O \#\+User dado \\
+\hline
+{\em date} & A viagem mais recente do \#\+User \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{users_8c_ac96b16d5d13dd8e2c3f80b6d56a47677}\label{users_8c_ac96b16d5d13dd8e2c3f80b6d56a47677}} 
+\index{users.c@{users.c}!sort\_\_dist\_t@{sort\_\_dist\_t}}
+\index{sort\_\_dist\_t@{sort\_\_dist\_t}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{sort\_\_dist\_t()}{sort\_\_dist\_t()}}
+{\footnotesize\ttfamily GList $\ast$ sort\+\_\+\+\_\+dist\+\_\+t (\begin{DoxyParamCaption}\item[{USER\+\_\+\+HT $\ast$}]{table }\end{DoxyParamCaption})}
+
+
+
+Funcão auxiliar que transforma a hashtable numa lista ligada e ordena-\/a por ordem descrescente da distância percorrida. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & catálogo (hashtable) dos users\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A lista ligada ordenada pela distância percorrida 
+\end{DoxyReturn}
+\mbox{\Hypertarget{users_8c_ade28daa8c9f134ac425e8c3f419dd19e}\label{users_8c_ade28daa8c9f134ac425e8c3f419dd19e}} 
+\index{users.c@{users.c}!validPayMethod@{validPayMethod}}
+\index{validPayMethod@{validPayMethod}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{validPayMethod()}{validPayMethod()}}
+{\footnotesize\ttfamily int valid\+Pay\+Method (\begin{DoxyParamCaption}\item[{char $\ast$}]{pm }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar com função de verificar se o método de pagamento é válido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pm} & O método de pagamento do \#\+User\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 se o pm for \char`\"{}credit\+\_\+card\char`\"{} ou \char`\"{}debit\+\_\+card\char`\"{} ou \char`\"{}cash\char`\"{}, 0 caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{users_8c_a716106e2a5aad8d2ac47364756f2e0c6}\label{users_8c_a716106e2a5aad8d2ac47364756f2e0c6}} 
+\index{users.c@{users.c}!validUserAccountStatus@{validUserAccountStatus}}
+\index{validUserAccountStatus@{validUserAccountStatus}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{validUserAccountStatus()}{validUserAccountStatus()}}
+{\footnotesize\ttfamily int valid\+User\+Account\+Status (\begin{DoxyParamCaption}\item[{char $\ast$}]{as }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar com função de verificar se o account status é válido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em as} & O account status do \#\+User\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 se o as for \char`\"{}\+ACTIVE\char`\"{} ou\char`\"{}\+INACTIVE\char`\"{}, 0 caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{users_8c_a33cd3a10cc149718aa4050e15d4ed65a}\label{users_8c_a33cd3a10cc149718aa4050e15d4ed65a}} 
+\index{users.c@{users.c}!validUserGender@{validUserGender}}
+\index{validUserGender@{validUserGender}!users.c@{users.c}}
+\doxysubsubsection{\texorpdfstring{validUserGender()}{validUserGender()}}
+{\footnotesize\ttfamily int valid\+User\+Gender (\begin{DoxyParamCaption}\item[{char}]{gndr }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que verifica se o género é válido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gndr} & O género dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1, caso o \textquotesingle{}gndr\textquotesingle{} seja \char`\"{}\+M\char`\"{} ou \char`\"{}\+F\char`\"{}, 0 caso contrário 
+\end{DoxyReturn}

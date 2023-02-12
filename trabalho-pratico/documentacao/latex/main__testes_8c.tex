@@ -1,0 +1,87 @@
+\hypertarget{main__testes_8c}{}\doxysection{/home/matilde/\+Desktop/grupo-\/18/trabalho-\/pratico/testes/main\+\_\+testes.c File Reference}
+\label{main__testes_8c}\index{/home/matilde/Desktop/grupo-\/18/trabalho-\/pratico/testes/main\_testes.c@{/home/matilde/Desktop/grupo-\/18/trabalho-\/pratico/testes/main\_testes.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/users.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/drivers.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/rides.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/queries.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/prints.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main__testes_8c_ab4e378743bc62c017c68d5d2196fcd7c}{compare\+Files}} (const char $\ast$file1, const char $\ast$file2)
+\begin{DoxyCompactList}\small\item\em Funcão auxiliar que verifica se o conteúdo de dois ficheiros é igual. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{main__testes_8c_aa5f97d637bf4ab8a32ec12fd3983048f}{pointer\+\_\+file}} (char $\ast$path, char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Funcão auxiliar que é usada para concatenar duas strings\+: \char`\"{}path\char`\"{} e \char`\"{}file\char`\"{}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main__testes_8c_a5ddfecf93b2a83e1843ab37a378f6271}{str\+\_\+is\+\_\+num}} (char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Funcão auxiliar que verifica se uma string é um número. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main__testes_8c_afd24ec4e7d7e30b3922c1a0e5a21cfca}\label{main__testes_8c_afd24ec4e7d7e30b3922c1a0e5a21cfca}} 
+int {\bfseries teste\+\_\+queries} (int argc, char $\ast$$\ast$argv)
+\item 
+\mbox{\Hypertarget{main__testes_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{main__testes_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+int {\bfseries main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Este ficheiro contém a função responsável para a execução do programa de testes 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main__testes_8c_ab4e378743bc62c017c68d5d2196fcd7c}\label{main__testes_8c_ab4e378743bc62c017c68d5d2196fcd7c}} 
+\index{main\_testes.c@{main\_testes.c}!compareFiles@{compareFiles}}
+\index{compareFiles@{compareFiles}!main\_testes.c@{main\_testes.c}}
+\doxysubsubsection{\texorpdfstring{compareFiles()}{compareFiles()}}
+{\footnotesize\ttfamily int compare\+Files (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file1,  }\item[{const char $\ast$}]{file2 }\end{DoxyParamCaption})}
+
+
+
+Funcão auxiliar que verifica se o conteúdo de dois ficheiros é igual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file1} & caminho para o ficheiro \\
+\hline
+{\em file2} & caminho para o ficheiro\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0, se econtrar uma diferença ou se tiver algum problema ao abrir algum ficheiro 1, se não encontrar diferenças, indicando os ficheiros que são iguais 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main__testes_8c_aa5f97d637bf4ab8a32ec12fd3983048f}\label{main__testes_8c_aa5f97d637bf4ab8a32ec12fd3983048f}} 
+\index{main\_testes.c@{main\_testes.c}!pointer\_file@{pointer\_file}}
+\index{pointer\_file@{pointer\_file}!main\_testes.c@{main\_testes.c}}
+\doxysubsubsection{\texorpdfstring{pointer\_file()}{pointer\_file()}}
+{\footnotesize\ttfamily char $\ast$ pointer\+\_\+file (\begin{DoxyParamCaption}\item[{char $\ast$}]{path,  }\item[{char $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Funcão auxiliar que é usada para concatenar duas strings\+: \char`\"{}path\char`\"{} e \char`\"{}file\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & caminho para a pasta \\
+\hline
+{\em file} & nome do ficheiro\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+o caminho para o ficheiro da pasta \textquotesingle{}path\textquotesingle{} do ficheiro \textquotesingle{}file\textquotesingle{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main__testes_8c_a5ddfecf93b2a83e1843ab37a378f6271}\label{main__testes_8c_a5ddfecf93b2a83e1843ab37a378f6271}} 
+\index{main\_testes.c@{main\_testes.c}!str\_is\_num@{str\_is\_num}}
+\index{str\_is\_num@{str\_is\_num}!main\_testes.c@{main\_testes.c}}
+\doxysubsubsection{\texorpdfstring{str\_is\_num()}{str\_is\_num()}}
+{\footnotesize\ttfamily int str\+\_\+is\+\_\+num (\begin{DoxyParamCaption}\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Funcão auxiliar que verifica se uma string é um número. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & String dada\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 se a string de entrada \char`\"{}str\char`\"{} contiver algum caractere que não seja um dígito (0-\/9), caso contrário, retorna 0. 
+\end{DoxyReturn}

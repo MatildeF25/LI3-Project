@@ -1,0 +1,221 @@
+\hypertarget{prints_8c}{}\doxysection{/home/matilde/\+Desktop/grupo-\/18/trabalho-\/pratico/src/prints.c File Reference}
+\label{prints_8c}\index{/home/matilde/Desktop/grupo-\/18/trabalho-\/pratico/src/prints.c@{/home/matilde/Desktop/grupo-\/18/trabalho-\/pratico/src/prints.c}}
+{\ttfamily \#include \char`\"{}../include/prints.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{prints_8c_ab13e858612c64eeef73aff1d8a03945e}\label{prints_8c_ab13e858612c64eeef73aff1d8a03945e}} 
+void {\bfseries print\+Menu} ()
+\begin{DoxyCompactList}\small\item\em Função que dá print do menu no terminal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{prints_8c_a0299eaeaf869043ead2d757e57652b09}{print\+\_\+q1users}} (USER\+\_\+\+HT $\ast$lista, char $\ast$username)
+\begin{DoxyCompactList}\small\item\em Função que executa query 1 se o argumento for um username de um user e dá print no terminal ao resultado da query 1 pedida pelo utilizador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{prints_8c_aecc59178c8598c7edf07ff856aab0f6c}{print\+\_\+q1driver}} (DRIVERS\+\_\+\+HT $\ast$lista, int id)
+\begin{DoxyCompactList}\small\item\em Função que executa query 1 se o argumento for um id de um driver e dá print no terminal ao resultado da query 1 pedida pelo utilizador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{prints_8c_ae8d9c319bb37d8c4a195f1f2948498ff}{print\+\_\+q2}} (DRIVERS\+\_\+\+HT $\ast$lista, int N)
+\begin{DoxyCompactList}\small\item\em Função que executa query 2 e dá print no terminal ao resultado da query 2 pedida pelo utilizador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{prints_8c_ad6d185b1f2a39874e910fe29939bede9}{print\+\_\+q3}} (USER\+\_\+\+HT $\ast$lista, int N)
+\begin{DoxyCompactList}\small\item\em Função que executa query 3 e dá print no terminal ao resultado da query 3 pedida pelo utilizador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{prints_8c_a57dfb1bf3d641256e87caac38a34ccd5}{print\+\_\+q4}} (RIDES\+\_\+\+HT $\ast$lista, DRIVERS\+\_\+\+HT $\ast$lista2, char $\ast$cidade)
+\begin{DoxyCompactList}\small\item\em Função que executa query 4 e dá print no terminal ao resultado da query 4 pedida pelo utilizador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{prints_8c_a3f6a7f065595adcd474e7efd8c1a3ed9}{print\+\_\+q5}} (RIDES\+\_\+\+HT $\ast$lista, DRIVERS\+\_\+\+HT $\ast$lista2, char $\ast$data1, char $\ast$data2)
+\begin{DoxyCompactList}\small\item\em Função que executa query 5 e dá print no terminal ao resultado da query 5 pedida pelo utilizador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{prints_8c_ae6667aae83bf8fbefa104aa4c8662245}{print\+\_\+q6}} (RIDES\+\_\+\+HT $\ast$lista, char $\ast$cidade, char $\ast$data1, char $\ast$data2)
+\begin{DoxyCompactList}\small\item\em Função que executa query 6 e dá print no terminal ao resultado da query 6 pedida pelo utilizador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{prints_8c_a003973085789bba34a608890954bf8f2}{print\+\_\+q7}} (DRIVERS\+\_\+\+HT $\ast$lista, int N)
+\begin{DoxyCompactList}\small\item\em Função que executa query 7 e dá print no terminal ao resultado da query 7 pedida pelo utilizador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{prints_8c_a5e23305e6e9d6605f94dea339ce658af}{print\+\_\+q8}} (RIDES\+\_\+\+HT $\ast$lista, DRIVERS\+\_\+\+HT $\ast$lista2, USER\+\_\+\+HT $\ast$lista3, char g, int anos)
+\begin{DoxyCompactList}\small\item\em Função que executa query 8 e dá print no terminal ao resultado da query 8 pedida pelo utilizador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{prints_8c_a300f8ef12cf1bf99ea4d41f7109ec38f}{print\+\_\+q9}} (RIDES\+\_\+\+HT $\ast$lista, char $\ast$data1, char $\ast$data2)
+\begin{DoxyCompactList}\small\item\em Função que executa query 9 e dá print no terminal ao resultado da query 9 pedida pelo utilizador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Este ficheiro é responsável pela interação no terminal Lê comandos, aplica a query e dá print aos outputs no terminal 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{prints_8c_aecc59178c8598c7edf07ff856aab0f6c}\label{prints_8c_aecc59178c8598c7edf07ff856aab0f6c}} 
+\index{prints.c@{prints.c}!print\_q1driver@{print\_q1driver}}
+\index{print\_q1driver@{print\_q1driver}!prints.c@{prints.c}}
+\doxysubsubsection{\texorpdfstring{print\_q1driver()}{print\_q1driver()}}
+{\footnotesize\ttfamily void print\+\_\+q1driver (\begin{DoxyParamCaption}\item[{DRIVERS\+\_\+\+HT $\ast$}]{lista,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Função que executa query 1 se o argumento for um id de um driver e dá print no terminal ao resultado da query 1 pedida pelo utilizador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) dos drivers \\
+\hline
+{\em id} & inteiro que será o id (drivers.\+csv) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{prints_8c_a0299eaeaf869043ead2d757e57652b09}\label{prints_8c_a0299eaeaf869043ead2d757e57652b09}} 
+\index{prints.c@{prints.c}!print\_q1users@{print\_q1users}}
+\index{print\_q1users@{print\_q1users}!prints.c@{prints.c}}
+\doxysubsubsection{\texorpdfstring{print\_q1users()}{print\_q1users()}}
+{\footnotesize\ttfamily void print\+\_\+q1users (\begin{DoxyParamCaption}\item[{USER\+\_\+\+HT $\ast$}]{lista,  }\item[{char $\ast$}]{username }\end{DoxyParamCaption})}
+
+
+
+Função que executa query 1 se o argumento for um username de um user e dá print no terminal ao resultado da query 1 pedida pelo utilizador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) dos users \\
+\hline
+{\em username} & string que será o username (users.\+csv) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{prints_8c_ae8d9c319bb37d8c4a195f1f2948498ff}\label{prints_8c_ae8d9c319bb37d8c4a195f1f2948498ff}} 
+\index{prints.c@{prints.c}!print\_q2@{print\_q2}}
+\index{print\_q2@{print\_q2}!prints.c@{prints.c}}
+\doxysubsubsection{\texorpdfstring{print\_q2()}{print\_q2()}}
+{\footnotesize\ttfamily void print\+\_\+q2 (\begin{DoxyParamCaption}\item[{DRIVERS\+\_\+\+HT $\ast$}]{lista,  }\item[{int}]{N }\end{DoxyParamCaption})}
+
+
+
+Função que executa query 2 e dá print no terminal ao resultado da query 2 pedida pelo utilizador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) dos drivers \\
+\hline
+{\em N} & Número de vezes que o loop irá iterar e escrever informações sobre os drivers no terminal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{prints_8c_ad6d185b1f2a39874e910fe29939bede9}\label{prints_8c_ad6d185b1f2a39874e910fe29939bede9}} 
+\index{prints.c@{prints.c}!print\_q3@{print\_q3}}
+\index{print\_q3@{print\_q3}!prints.c@{prints.c}}
+\doxysubsubsection{\texorpdfstring{print\_q3()}{print\_q3()}}
+{\footnotesize\ttfamily void print\+\_\+q3 (\begin{DoxyParamCaption}\item[{USER\+\_\+\+HT $\ast$}]{lista,  }\item[{int}]{N }\end{DoxyParamCaption})}
+
+
+
+Função que executa query 3 e dá print no terminal ao resultado da query 3 pedida pelo utilizador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) dos users \\
+\hline
+{\em N} & Número de vezes que o loop irá iterar e escrever informações sobre os users no terminal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{prints_8c_a57dfb1bf3d641256e87caac38a34ccd5}\label{prints_8c_a57dfb1bf3d641256e87caac38a34ccd5}} 
+\index{prints.c@{prints.c}!print\_q4@{print\_q4}}
+\index{print\_q4@{print\_q4}!prints.c@{prints.c}}
+\doxysubsubsection{\texorpdfstring{print\_q4()}{print\_q4()}}
+{\footnotesize\ttfamily void print\+\_\+q4 (\begin{DoxyParamCaption}\item[{RIDES\+\_\+\+HT $\ast$}]{lista,  }\item[{DRIVERS\+\_\+\+HT $\ast$}]{lista2,  }\item[{char $\ast$}]{cidade }\end{DoxyParamCaption})}
+
+
+
+Função que executa query 4 e dá print no terminal ao resultado da query 4 pedida pelo utilizador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) das rides \\
+\hline
+{\em lista2} & catálogo (hashtable) dos drivers \\
+\hline
+{\em cidade} & string que será a cidade (rides.\+csv) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{prints_8c_a3f6a7f065595adcd474e7efd8c1a3ed9}\label{prints_8c_a3f6a7f065595adcd474e7efd8c1a3ed9}} 
+\index{prints.c@{prints.c}!print\_q5@{print\_q5}}
+\index{print\_q5@{print\_q5}!prints.c@{prints.c}}
+\doxysubsubsection{\texorpdfstring{print\_q5()}{print\_q5()}}
+{\footnotesize\ttfamily void print\+\_\+q5 (\begin{DoxyParamCaption}\item[{RIDES\+\_\+\+HT $\ast$}]{lista,  }\item[{DRIVERS\+\_\+\+HT $\ast$}]{lista2,  }\item[{char $\ast$}]{data1,  }\item[{char $\ast$}]{data2 }\end{DoxyParamCaption})}
+
+
+
+Função que executa query 5 e dá print no terminal ao resultado da query 5 pedida pelo utilizador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) das rides \\
+\hline
+{\em lista2} & catálogo (hashtable) dos drivers \\
+\hline
+{\em data1} & limite inferior do intervalo de tempo dado \\
+\hline
+{\em data2} & limite superior do intervalo de tempo dado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{prints_8c_ae6667aae83bf8fbefa104aa4c8662245}\label{prints_8c_ae6667aae83bf8fbefa104aa4c8662245}} 
+\index{prints.c@{prints.c}!print\_q6@{print\_q6}}
+\index{print\_q6@{print\_q6}!prints.c@{prints.c}}
+\doxysubsubsection{\texorpdfstring{print\_q6()}{print\_q6()}}
+{\footnotesize\ttfamily void print\+\_\+q6 (\begin{DoxyParamCaption}\item[{RIDES\+\_\+\+HT $\ast$}]{lista,  }\item[{char $\ast$}]{cidade,  }\item[{char $\ast$}]{data1,  }\item[{char $\ast$}]{data2 }\end{DoxyParamCaption})}
+
+
+
+Função que executa query 6 e dá print no terminal ao resultado da query 6 pedida pelo utilizador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) das rides \\
+\hline
+{\em cidade} & string que será a cidade (rides.\+csv) \\
+\hline
+{\em data1} & limite inferior do intervalo de tempo dado \\
+\hline
+{\em data2} & limite superior do intervalo de tempo dado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{prints_8c_a003973085789bba34a608890954bf8f2}\label{prints_8c_a003973085789bba34a608890954bf8f2}} 
+\index{prints.c@{prints.c}!print\_q7@{print\_q7}}
+\index{print\_q7@{print\_q7}!prints.c@{prints.c}}
+\doxysubsubsection{\texorpdfstring{print\_q7()}{print\_q7()}}
+{\footnotesize\ttfamily void print\+\_\+q7 (\begin{DoxyParamCaption}\item[{DRIVERS\+\_\+\+HT $\ast$}]{lista,  }\item[{int}]{N }\end{DoxyParamCaption})}
+
+
+
+Função que executa query 7 e dá print no terminal ao resultado da query 7 pedida pelo utilizador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) dos drivers \\
+\hline
+{\em N} & Número de vezes que o loop irá iterar e escrever informações sobre os drivers no terminal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{prints_8c_a5e23305e6e9d6605f94dea339ce658af}\label{prints_8c_a5e23305e6e9d6605f94dea339ce658af}} 
+\index{prints.c@{prints.c}!print\_q8@{print\_q8}}
+\index{print\_q8@{print\_q8}!prints.c@{prints.c}}
+\doxysubsubsection{\texorpdfstring{print\_q8()}{print\_q8()}}
+{\footnotesize\ttfamily void print\+\_\+q8 (\begin{DoxyParamCaption}\item[{RIDES\+\_\+\+HT $\ast$}]{lista,  }\item[{DRIVERS\+\_\+\+HT $\ast$}]{lista2,  }\item[{USER\+\_\+\+HT $\ast$}]{lista3,  }\item[{char}]{g,  }\item[{int}]{anos }\end{DoxyParamCaption})}
+
+
+
+Função que executa query 8 e dá print no terminal ao resultado da query 8 pedida pelo utilizador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) das rides \\
+\hline
+{\em lista2} & catálogo (hashtable) dos drivers \\
+\hline
+{\em g} & género dado como argumento \\
+\hline
+{\em anos} & número de anos dado como argumento que uma conta deve ter \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{prints_8c_a300f8ef12cf1bf99ea4d41f7109ec38f}\label{prints_8c_a300f8ef12cf1bf99ea4d41f7109ec38f}} 
+\index{prints.c@{prints.c}!print\_q9@{print\_q9}}
+\index{print\_q9@{print\_q9}!prints.c@{prints.c}}
+\doxysubsubsection{\texorpdfstring{print\_q9()}{print\_q9()}}
+{\footnotesize\ttfamily void print\+\_\+q9 (\begin{DoxyParamCaption}\item[{RIDES\+\_\+\+HT $\ast$}]{lista,  }\item[{char $\ast$}]{data1,  }\item[{char $\ast$}]{data2 }\end{DoxyParamCaption})}
+
+
+
+Função que executa query 9 e dá print no terminal ao resultado da query 9 pedida pelo utilizador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) das rides \\
+\hline
+{\em data1} & limite inferior do intervalo de tempo dado \\
+\hline
+{\em data2} & limite superior do intervalo de tempo dado \\
+\hline
+\end{DoxyParams}

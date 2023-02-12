@@ -1,0 +1,903 @@
+\hypertarget{rides_8c}{}\doxysection{/home/matilde/\+Desktop/grupo-\/18/trabalho-\/pratico/src/rides.c File Reference}
+\label{rides_8c}\index{/home/matilde/Desktop/grupo-\/18/trabalho-\/pratico/src/rides.c@{/home/matilde/Desktop/grupo-\/18/trabalho-\/pratico/src/rides.c}}
+{\ttfamily \#include \char`\"{}../include/rides.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrides}{rides}}
+\begin{DoxyCompactList}\small\item\em Type usado para definir uma ride. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrides__ht}{rides\+\_\+ht}}
+\begin{DoxyCompactList}\small\item\em definição de uma hashtable para as rides \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{rides_8c_a1e2e152d4d4eec649dd7e4aacd6add90}\label{rides_8c_a1e2e152d4d4eec649dd7e4aacd6add90}} 
+\#define {\bfseries FREE}(algo)~if (algo) free(algo)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{rides_8c_a64f91a618fca2027aff0a9a6a87aa7b9}{set\+IDRides}} (Rides \mbox{\hyperlink{structrides}{rides}}, int iD)
+\begin{DoxyCompactList}\small\item\em Define o ID de uma \#\+Ride. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rides_8c_a60f10c5f56e7b954b71f44887d27b510}{get\+IDRides}} (Rides \mbox{\hyperlink{structrides}{rides}})
+\begin{DoxyCompactList}\small\item\em Obtém o ID de uma \#\+Ride. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rides_8c_a23b2cd695d3a702da1fb2cef1f04dd76}{set\+Date}} (Rides \mbox{\hyperlink{structrides}{rides}}, Date \mbox{\hyperlink{structdate}{date}})
+\begin{DoxyCompactList}\small\item\em Define a data de uma \#\+Ride. \end{DoxyCompactList}\item 
+Date \mbox{\hyperlink{rides_8c_a4fb046c2ab0f9cfaadcbfe94bf32107c}{get\+Date}} (Rides \mbox{\hyperlink{structrides}{rides}})
+\begin{DoxyCompactList}\small\item\em Obtém a data de uma \#\+Ride. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rides_8c_a22d15dd744ea3ae159d6f0b65a225a36}{setdriver}} (Rides \mbox{\hyperlink{structrides}{rides}}, int i\+D\+\_\+driver)
+\begin{DoxyCompactList}\small\item\em Define o driver de uma \#\+Ride. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rides_8c_a7340a080deb64aa85681b6a3df82f7f3}{getdriver}} (Rides \mbox{\hyperlink{structrides}{rides}})
+\begin{DoxyCompactList}\small\item\em Obtém o condutor de uma \#\+Ride. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rides_8c_afe18b86ef72eaed027c81c44f453e7b1}{set\+User}} (Rides \mbox{\hyperlink{structrides}{rides}}, char $\ast$usr)
+\begin{DoxyCompactList}\small\item\em Define o utilizador de uma \#\+Ride. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{rides_8c_ad79259a81abc804cbb8b417a766061e4}{get\+User}} (Rides \mbox{\hyperlink{structrides}{rides}})
+\begin{DoxyCompactList}\small\item\em Obtém o utilizador de uma \#\+Ride. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rides_8c_a05fff6a8881ab9239dc59c45c53bc7d6}{set\+City}} (Rides \mbox{\hyperlink{structrides}{rides}}, char $\ast$ct)
+\begin{DoxyCompactList}\small\item\em Define a cidade de uma \#\+Ride. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{rides_8c_af32d1f878e34be1cea1da1e6356e3686}{get\+City}} (Rides \mbox{\hyperlink{structrides}{rides}})
+\begin{DoxyCompactList}\small\item\em Obtém a cidade de uma \#\+Ride. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rides_8c_aea1eca429b399fd8dacbe66d693a081e}{valid\+Distance}} (int dst)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que verifica se a distẫncia é válida. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rides_8c_a6eb3818cca5d0667c0c64fbb922db85d}{set\+Distance}} (Rides \mbox{\hyperlink{structrides}{rides}}, int dst)
+\begin{DoxyCompactList}\small\item\em Define distância de uma \#\+Ride. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rides_8c_af9269d8b84ca2a42c10d91e50e829533}{get\+Distance}} (Rides \mbox{\hyperlink{structrides}{rides}})
+\begin{DoxyCompactList}\small\item\em Obtém a distância de uma \#\+Ride. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rides_8c_a2f6948992b6735ec8471e08b472a90aa}{elem}} (int x, int v\mbox{[}$\,$\mbox{]}, int N)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que verifica se um inteiro pertence a uma certa lista de tamanho N de inteiros. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rides_8c_a45e1b22e14695412025e97960f6f1a9a}{set\+User\+Score}} (Rides \mbox{\hyperlink{structrides}{rides}}, int scr)
+\begin{DoxyCompactList}\small\item\em Define a pontuação de uma \#\+Ride. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rides_8c_af1db19cdb33b5a6c818a22420dfbcef6}{get\+User\+Score}} (Rides \mbox{\hyperlink{structrides}{rides}})
+\begin{DoxyCompactList}\small\item\em Obtém a pontuação de uma \#\+Ride. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rides_8c_a646dc7ed1be9dcd63798d2fea78840b2}{set\+Driver\+Score}} (Rides \mbox{\hyperlink{structrides}{rides}}, int scr)
+\begin{DoxyCompactList}\small\item\em Define a pontução do driver de uma \#\+Ride. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{rides_8c_ac8a05b342aa21996df6e6f4a501d8c8b}{get\+Driver\+Score}} (Rides \mbox{\hyperlink{structrides}{rides}})
+\begin{DoxyCompactList}\small\item\em Obtém a pontuação do driver da \#\+Ride. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rides_8c_a0a1fdf5033492bf615f0a1a4db5769e8}{set\+Tip}} (Rides \mbox{\hyperlink{structrides}{rides}}, double tp)
+\begin{DoxyCompactList}\small\item\em Define a tip de uma \#\+Ride. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{rides_8c_ae373f717cecdad84dfb37f946ab14549}{get\+Tip}} (Rides \mbox{\hyperlink{structrides}{rides}})
+\begin{DoxyCompactList}\small\item\em Obtém a tip de uma \#\+Ride. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rides_8c_a862d496604e004e0cc760cfecf41dc21}{set\+Comment}} (Rides \mbox{\hyperlink{structrides}{rides}}, char $\ast$cmnt)
+\begin{DoxyCompactList}\small\item\em Define o comentário de uma \#\+Ride. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{rides_8c_a17cc27257e93b8d56f2c51a034ed5564}{get\+Comment}} (Rides \mbox{\hyperlink{structrides}{rides}})
+\begin{DoxyCompactList}\small\item\em Obtém o comentário de uma \#\+Ride. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rides_8c_a5cb40423610c95bae7fd951cc9c394a0}{set\+AccountD}} (Rides \mbox{\hyperlink{structrides}{rides}}, Date \mbox{\hyperlink{structdate}{date}})
+\begin{DoxyCompactList}\small\item\em Define a data de criação da conta de um \#\+Driver. \end{DoxyCompactList}\item 
+Date \mbox{\hyperlink{rides_8c_a4ff17276f941e0c4f97645030a53c7f9}{get\+AccountD}} (Rides \mbox{\hyperlink{structrides}{rides}})
+\begin{DoxyCompactList}\small\item\em Obtém a data de criação da conta de um \#\+Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rides_8c_a7238acee7ef71972b79cdc3812e1e44c}{set\+AccountU}} (Rides \mbox{\hyperlink{structrides}{rides}}, Date \mbox{\hyperlink{structdate}{date}})
+\begin{DoxyCompactList}\small\item\em Define a data de criação da conta de um \#\+User. \end{DoxyCompactList}\item 
+Date \mbox{\hyperlink{rides_8c_ab6a747ebad573b7b8ad9f35e107abeae}{get\+AccountU}} (Rides \mbox{\hyperlink{structrides}{rides}})
+\begin{DoxyCompactList}\small\item\em Obtém a data de criação da conta de um \#\+User. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{rides_8c_a2836ff5b95144c8de1edc3c704e5a974}{valid\+Decimal}} (char $\ast$buffer)
+\begin{DoxyCompactList}\small\item\em Função que verifica se uma string corresponde a um número decimal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rides_8c_aa1335206cb87ec3829ed2dd6426d8e94}{delete\+\_\+ride}} (void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Liberta a memória ocupada por cada campo da Ride (user, city, comment) e, no fim, ao próprio r. \end{DoxyCompactList}\item 
+Rides \mbox{\hyperlink{rides_8c_a21b0a31b7389eb50868b326c9ee22978}{build\+\_\+rides}} (char $\ast$line)
+\begin{DoxyCompactList}\small\item\em Verifica se uma dada \#\+Ride tem todos os parametros válidos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rides_8c_a6cc4a962072813c9f18c34e8b0de6926}{set}} (USER\+\_\+\+HT $\ast$lista, DRIVERS\+\_\+\+HT $\ast$lista2, Rides r)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que atualiza algumas variáveis da strust dos drivers e dos users. \end{DoxyCompactList}\item 
+RIDES\+\_\+\+HT $\ast$ \mbox{\hyperlink{rides_8c_a9b7a12ae8f518fd089456fc434a65cdd}{create\+\_\+\+Rides\+Ht}} (char $\ast$ficheiro\+\_\+entrada, USER\+\_\+\+HT $\ast$lista, DRIVERS\+\_\+\+HT $\ast$lista2)
+\begin{DoxyCompactList}\small\item\em função que cria um catálogo (hashtable) com todas as linhas válidas do ficheiro rides.\+csv \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rides_8c_a45bcad9ed388ec42ae82cde94091d5e2}{delete\+\_\+rides\+\_\+hash}} (RIDES\+\_\+\+HT $\ast$lista)
+\begin{DoxyCompactList}\small\item\em Funcão auxiliar liberta da memória a hashtable das rides. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{rides_8c_a1f1fbd692477580e9fbac2800b47af58}{preco\+\_\+medio}} (RIDES\+\_\+\+HT $\ast$lista, DRIVERS\+\_\+\+HT $\ast$lista2, char $\ast$cidade)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que calcula Preço médio numa determinada cidade. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{rides_8c_a84814302367fe1903ea286e96613cd53}{preco\+\_\+medio\+\_\+entre\+\_\+datas}} (RIDES\+\_\+\+HT $\ast$lista, DRIVERS\+\_\+\+HT $\ast$lista2, char $\ast$data1, char $\ast$data2)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que calcula Preço médio das viagens num dado intervalo de tempo, sendo esse intervalo representado por $<$data A$>$ e $<$data B$>$. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{rides_8c_a9fbc05c860f513eef5795d63e987a1e1}{distancia\+\_\+medio}} (RIDES\+\_\+\+HT $\ast$lista, char $\ast$cidade, char $\ast$data1, char $\ast$data2)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que calcula Preço médio das viagens numa certa cidade num dado intervalo de tempo, sendo esse intervalo representado por $<$data A$>$ e $<$data B$>$. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rides_8c_a37fbe0566e1d7974c0fc98070735f4ae}{avaliacao\+\_\+t\+\_\+cidade}} (RIDES\+\_\+\+HT $\ast$lista, DRIVERS\+\_\+\+HT $\ast$lista2, char $\ast$cidade)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que atualiza as variáveis avaliação\+\_\+cidade e a viagens\+\_\+cidade da struct dos drivers. \end{DoxyCompactList}\item 
+GList $\ast$ \mbox{\hyperlink{rides_8c_a68a7b720329b6ffac0e8d4feb2f25182}{list\+\_\+rides\+\_\+8}} (RIDES\+\_\+\+HT $\ast$lista, DRIVERS\+\_\+\+HT $\ast$lista2, USER\+\_\+\+HT $\ast$lista3, char g, int anos)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que cria uma lista ligada com todas as rides onde o utilizador e o condutor têm o gênero passado como argumento e x ou mais anos de conta. \end{DoxyCompactList}\item 
+gint \mbox{\hyperlink{rides_8c_a6a11d0156383817374cabcc2cc1fc97c}{conta\+\_\+mais\+\_\+antiga}} (gconstpointer a, gconstpointer b)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que compara duas rides com base nas datas de criação. \end{DoxyCompactList}\item 
+GList $\ast$ \mbox{\hyperlink{rides_8c_a8319d7415360f989c4d4d9c977d3bc4e}{sort\+\_\+conta\+\_\+mais\+\_\+antiga}} (RIDES\+\_\+\+HT $\ast$lista, DRIVERS\+\_\+\+HT $\ast$lista2, USER\+\_\+\+HT $\ast$lista3, char g, int anos)
+\begin{DoxyCompactList}\small\item\em Funcão auxiliar que transforma a hashtable numa lista ligada e ordena-\/a por ordem descrescente da idade da conta. \end{DoxyCompactList}\item 
+GList $\ast$ \mbox{\hyperlink{rides_8c_a665bf21094072389a9c80d1728e65ed3}{list\+\_\+rides\+\_\+9}} (RIDES\+\_\+\+HT $\ast$lista, char $\ast$date1, char $\ast$date2)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que cria uma lista ligada com todas as rides onde a tip é maior que 0 e a data da ride está entre um certo intervalo de tempo. \end{DoxyCompactList}\item 
+gint \mbox{\hyperlink{rides_8c_a7b8f09f2d801d03c33010fd72d5fd372}{compara\+\_\+distancia}} (gconstpointer a, gconstpointer b)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que compara duas rides com base nas distâncias percorridas. \end{DoxyCompactList}\item 
+GList $\ast$ \mbox{\hyperlink{rides_8c_a137ce724e03330d850a5a65838237594}{sort\+\_\+menor\+\_\+dist}} (RIDES\+\_\+\+HT $\ast$table, char $\ast$data1, char $\ast$data2)
+\begin{DoxyCompactList}\small\item\em Funcão auxiliar que transforma a hashtable numa lista ligada e ordena-\/a por ordem descrescente da distância percorrida. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Este ficheiro contém a struct das rides, a função que cria uma ride válida e a hashtabel com as rides válidas 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{rides_8c_a37fbe0566e1d7974c0fc98070735f4ae}\label{rides_8c_a37fbe0566e1d7974c0fc98070735f4ae}} 
+\index{rides.c@{rides.c}!avaliacao\_t\_cidade@{avaliacao\_t\_cidade}}
+\index{avaliacao\_t\_cidade@{avaliacao\_t\_cidade}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{avaliacao\_t\_cidade()}{avaliacao\_t\_cidade()}}
+{\footnotesize\ttfamily int avaliacao\+\_\+t\+\_\+cidade (\begin{DoxyParamCaption}\item[{RIDES\+\_\+\+HT $\ast$}]{lista,  }\item[{DRIVERS\+\_\+\+HT $\ast$}]{lista2,  }\item[{char $\ast$}]{cidade }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que atualiza as variáveis avaliação\+\_\+cidade e a viagens\+\_\+cidade da struct dos drivers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) das rides \\
+\hline
+{\em lista2} & catálogo (hashtable) das drivers \\
+\hline
+{\em cidade} & cidade dada \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rides_8c_a21b0a31b7389eb50868b326c9ee22978}\label{rides_8c_a21b0a31b7389eb50868b326c9ee22978}} 
+\index{rides.c@{rides.c}!build\_rides@{build\_rides}}
+\index{build\_rides@{build\_rides}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{build\_rides()}{build\_rides()}}
+{\footnotesize\ttfamily Rides build\+\_\+rides (\begin{DoxyParamCaption}\item[{char $\ast$}]{line }\end{DoxyParamCaption})}
+
+
+
+Verifica se uma dada \#\+Ride tem todos os parametros válidos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & string com os paremetros de uma \#\+Ride\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \#\+Ride caso todos os parametros sejam válidos e NULL caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rides_8c_a7b8f09f2d801d03c33010fd72d5fd372}\label{rides_8c_a7b8f09f2d801d03c33010fd72d5fd372}} 
+\index{rides.c@{rides.c}!compara\_distancia@{compara\_distancia}}
+\index{compara\_distancia@{compara\_distancia}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{compara\_distancia()}{compara\_distancia()}}
+{\footnotesize\ttfamily gint compara\+\_\+distancia (\begin{DoxyParamCaption}\item[{gconstpointer}]{a,  }\item[{gconstpointer}]{b }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que compara duas rides com base nas distâncias percorridas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Um pointer para a primeira ride\\
+\hline
+{\em b} & Um pointer para a segunda ride\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Se o output for positivo, isso significa que o objeto \char`\"{}b\char`\"{} é posterior ao objeto \char`\"{}a\char`\"{}, seja pela distância ou pela data Se o output for zero, significa que ambos os objetos são iguais tanto pela distância quanto pela data Se o output for negativo, significa que o objeto \char`\"{}a\char`\"{} é posterior ao objeto \char`\"{}b\char`\"{}, seja pela distância ou pela data Se o output for a subtração do identificador do objeto \char`\"{}b\char`\"{} pelo identificador do objeto \char`\"{}a\char`\"{}, significa que ambos os objetos têm a mesma distância e a mesma data, e que a ordem relativa entre eles é determinada pelos ids 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rides_8c_a6a11d0156383817374cabcc2cc1fc97c}\label{rides_8c_a6a11d0156383817374cabcc2cc1fc97c}} 
+\index{rides.c@{rides.c}!conta\_mais\_antiga@{conta\_mais\_antiga}}
+\index{conta\_mais\_antiga@{conta\_mais\_antiga}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{conta\_mais\_antiga()}{conta\_mais\_antiga()}}
+{\footnotesize\ttfamily gint conta\+\_\+mais\+\_\+antiga (\begin{DoxyParamCaption}\item[{gconstpointer}]{a,  }\item[{gconstpointer}]{b }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que compara duas rides com base nas datas de criação. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Um pointer para a primeira ride\\
+\hline
+{\em b} & Um pointer para a segunda ride\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Se o output for positivo, isso significa que o objeto \char`\"{}b\char`\"{} tem uma data de criação de conta mais recente, seja do driver ou do user Se o output for zero, significa que ambos os objetos têm as mesmas datas de criação de conta tanto para o driver como para o user Se o output for negativo, significa que o objeto \char`\"{}a\char`\"{} tem uma data de criação de conta mais recente, seja do driver ou do user Se o output for a subtração do identificador do objeto \char`\"{}b\char`\"{} pelo identificador do objeto \char`\"{}a\char`\"{}, significa que ambos os objetos têm as mesmas datas de criação de conta tanto para o driver como para o user, e a ordem relativa entre eles é determinada pelos ids 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rides_8c_a9b7a12ae8f518fd089456fc434a65cdd}\label{rides_8c_a9b7a12ae8f518fd089456fc434a65cdd}} 
+\index{rides.c@{rides.c}!create\_RidesHt@{create\_RidesHt}}
+\index{create\_RidesHt@{create\_RidesHt}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{create\_RidesHt()}{create\_RidesHt()}}
+{\footnotesize\ttfamily RIDES\+\_\+\+HT $\ast$ create\+\_\+\+Rides\+Ht (\begin{DoxyParamCaption}\item[{char $\ast$}]{ficheiro\+\_\+entrada,  }\item[{USER\+\_\+\+HT $\ast$}]{lista,  }\item[{DRIVERS\+\_\+\+HT $\ast$}]{lista2 }\end{DoxyParamCaption})}
+
+
+
+função que cria um catálogo (hashtable) com todas as linhas válidas do ficheiro rides.\+csv 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ficheiro\+\_\+entrada} & path para o ficheiro que se vai abrir para ser lido \\
+\hline
+{\em lista} & catálogo (hashtable) dos users \\
+\hline
+{\em lista2} & catálogo (hashtable) dos drivers\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+hashtable com todas as rides válidas 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rides_8c_aa1335206cb87ec3829ed2dd6426d8e94}\label{rides_8c_aa1335206cb87ec3829ed2dd6426d8e94}} 
+\index{rides.c@{rides.c}!delete\_ride@{delete\_ride}}
+\index{delete\_ride@{delete\_ride}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{delete\_ride()}{delete\_ride()}}
+{\footnotesize\ttfamily void delete\+\_\+ride (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Liberta a memória ocupada por cada campo da Ride (user, city, comment) e, no fim, ao próprio r. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer \char`\"{}data\char`\"{} associado a uma Ride \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rides_8c_a45bcad9ed388ec42ae82cde94091d5e2}\label{rides_8c_a45bcad9ed388ec42ae82cde94091d5e2}} 
+\index{rides.c@{rides.c}!delete\_rides\_hash@{delete\_rides\_hash}}
+\index{delete\_rides\_hash@{delete\_rides\_hash}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{delete\_rides\_hash()}{delete\_rides\_hash()}}
+{\footnotesize\ttfamily void delete\+\_\+rides\+\_\+hash (\begin{DoxyParamCaption}\item[{RIDES\+\_\+\+HT $\ast$}]{lista }\end{DoxyParamCaption})}
+
+
+
+Funcão auxiliar liberta da memória a hashtable das rides. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) das rides \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rides_8c_a9fbc05c860f513eef5795d63e987a1e1}\label{rides_8c_a9fbc05c860f513eef5795d63e987a1e1}} 
+\index{rides.c@{rides.c}!distancia\_medio@{distancia\_medio}}
+\index{distancia\_medio@{distancia\_medio}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{distancia\_medio()}{distancia\_medio()}}
+{\footnotesize\ttfamily double distancia\+\_\+medio (\begin{DoxyParamCaption}\item[{RIDES\+\_\+\+HT $\ast$}]{lista,  }\item[{char $\ast$}]{cidade,  }\item[{char $\ast$}]{data1,  }\item[{char $\ast$}]{data2 }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que calcula Preço médio das viagens numa certa cidade num dado intervalo de tempo, sendo esse intervalo representado por $<$data A$>$ e $<$data B$>$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) das rides \\
+\hline
+{\em lista2} & catálogo (hashtable) das drivers \\
+\hline
+{\em cidade} & cidade dada \\
+\hline
+{\em data1} & data minima \\
+\hline
+{\em dat2} & data máxima\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+preço médio das viagens numa certa cidade num dado intrevalo de tempo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rides_8c_a2f6948992b6735ec8471e08b472a90aa}\label{rides_8c_a2f6948992b6735ec8471e08b472a90aa}} 
+\index{rides.c@{rides.c}!elem@{elem}}
+\index{elem@{elem}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{elem()}{elem()}}
+{\footnotesize\ttfamily int elem (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{v\mbox{[}$\,$\mbox{]},  }\item[{int}]{N }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que verifica se um inteiro pertence a uma certa lista de tamanho N de inteiros. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & inteiro que se quer saber se pertence á lista \\
+\hline
+{\em v} & lista de inteiros \\
+\hline
+{\em N} & tamanho da lista\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1, caso x pertença à lista, 0 caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rides_8c_a4ff17276f941e0c4f97645030a53c7f9}\label{rides_8c_a4ff17276f941e0c4f97645030a53c7f9}} 
+\index{rides.c@{rides.c}!getAccountD@{getAccountD}}
+\index{getAccountD@{getAccountD}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{getAccountD()}{getAccountD()}}
+{\footnotesize\ttfamily Date get\+AccountD (\begin{DoxyParamCaption}\item[{Rides}]{rides }\end{DoxyParamCaption})}
+
+
+
+Obtém a data de criação da conta de um \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rides} & A \#\+Ride dada\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \#\+Date de criação 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rides_8c_ab6a747ebad573b7b8ad9f35e107abeae}\label{rides_8c_ab6a747ebad573b7b8ad9f35e107abeae}} 
+\index{rides.c@{rides.c}!getAccountU@{getAccountU}}
+\index{getAccountU@{getAccountU}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{getAccountU()}{getAccountU()}}
+{\footnotesize\ttfamily Date get\+AccountU (\begin{DoxyParamCaption}\item[{Rides}]{rides }\end{DoxyParamCaption})}
+
+
+
+Obtém a data de criação da conta de um \#\+User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rides} & A \#\+Ride dada\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \#\+Date de criação 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rides_8c_af32d1f878e34be1cea1da1e6356e3686}\label{rides_8c_af32d1f878e34be1cea1da1e6356e3686}} 
+\index{rides.c@{rides.c}!getCity@{getCity}}
+\index{getCity@{getCity}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{getCity()}{getCity()}}
+{\footnotesize\ttfamily char $\ast$ get\+City (\begin{DoxyParamCaption}\item[{Rides}]{rides }\end{DoxyParamCaption})}
+
+
+
+Obtém a cidade de uma \#\+Ride. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rides} & A \#\+Ride dada\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A cidade da \#\+Ride 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rides_8c_a17cc27257e93b8d56f2c51a034ed5564}\label{rides_8c_a17cc27257e93b8d56f2c51a034ed5564}} 
+\index{rides.c@{rides.c}!getComment@{getComment}}
+\index{getComment@{getComment}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{getComment()}{getComment()}}
+{\footnotesize\ttfamily char $\ast$ get\+Comment (\begin{DoxyParamCaption}\item[{Rides}]{rides }\end{DoxyParamCaption})}
+
+
+
+Obtém o comentário de uma \#\+Ride. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rides} & A \#\+Ride dada\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O comentário da \#\+Ride 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rides_8c_a4fb046c2ab0f9cfaadcbfe94bf32107c}\label{rides_8c_a4fb046c2ab0f9cfaadcbfe94bf32107c}} 
+\index{rides.c@{rides.c}!getDate@{getDate}}
+\index{getDate@{getDate}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{getDate()}{getDate()}}
+{\footnotesize\ttfamily Date get\+Date (\begin{DoxyParamCaption}\item[{Rides}]{rides }\end{DoxyParamCaption})}
+
+
+
+Obtém a data de uma \#\+Ride. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rides} & A \#\+Ride dada\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A data da \#\+Ride 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rides_8c_af9269d8b84ca2a42c10d91e50e829533}\label{rides_8c_af9269d8b84ca2a42c10d91e50e829533}} 
+\index{rides.c@{rides.c}!getDistance@{getDistance}}
+\index{getDistance@{getDistance}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{getDistance()}{getDistance()}}
+{\footnotesize\ttfamily int get\+Distance (\begin{DoxyParamCaption}\item[{Rides}]{rides }\end{DoxyParamCaption})}
+
+
+
+Obtém a distância de uma \#\+Ride. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rides} & A \#\+Ride dada\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A distância da \#\+Ride 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rides_8c_a7340a080deb64aa85681b6a3df82f7f3}\label{rides_8c_a7340a080deb64aa85681b6a3df82f7f3}} 
+\index{rides.c@{rides.c}!getdriver@{getdriver}}
+\index{getdriver@{getdriver}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{getdriver()}{getdriver()}}
+{\footnotesize\ttfamily int getdriver (\begin{DoxyParamCaption}\item[{Rides}]{rides }\end{DoxyParamCaption})}
+
+
+
+Obtém o condutor de uma \#\+Ride. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rides} & A \#\+Ride dada\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O condutor da \#\+Ride 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rides_8c_ac8a05b342aa21996df6e6f4a501d8c8b}\label{rides_8c_ac8a05b342aa21996df6e6f4a501d8c8b}} 
+\index{rides.c@{rides.c}!getDriverScore@{getDriverScore}}
+\index{getDriverScore@{getDriverScore}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{getDriverScore()}{getDriverScore()}}
+{\footnotesize\ttfamily double get\+Driver\+Score (\begin{DoxyParamCaption}\item[{Rides}]{rides }\end{DoxyParamCaption})}
+
+
+
+Obtém a pontuação do driver da \#\+Ride. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rides} & A \#\+Ride dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pontuação do driver da \#\+Ride 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rides_8c_a60f10c5f56e7b954b71f44887d27b510}\label{rides_8c_a60f10c5f56e7b954b71f44887d27b510}} 
+\index{rides.c@{rides.c}!getIDRides@{getIDRides}}
+\index{getIDRides@{getIDRides}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{getIDRides()}{getIDRides()}}
+{\footnotesize\ttfamily int get\+IDRides (\begin{DoxyParamCaption}\item[{Rides}]{rides }\end{DoxyParamCaption})}
+
+
+
+Obtém o ID de uma \#\+Ride. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rides} & A \#\+Ride dada\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O ID de uma \#\+Ride 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rides_8c_ae373f717cecdad84dfb37f946ab14549}\label{rides_8c_ae373f717cecdad84dfb37f946ab14549}} 
+\index{rides.c@{rides.c}!getTip@{getTip}}
+\index{getTip@{getTip}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{getTip()}{getTip()}}
+{\footnotesize\ttfamily double get\+Tip (\begin{DoxyParamCaption}\item[{Rides}]{rides }\end{DoxyParamCaption})}
+
+
+
+Obtém a tip de uma \#\+Ride. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rides} & A \#\+Ride dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A tip da \#\+Ride 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rides_8c_ad79259a81abc804cbb8b417a766061e4}\label{rides_8c_ad79259a81abc804cbb8b417a766061e4}} 
+\index{rides.c@{rides.c}!getUser@{getUser}}
+\index{getUser@{getUser}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{getUser()}{getUser()}}
+{\footnotesize\ttfamily char $\ast$ get\+User (\begin{DoxyParamCaption}\item[{Rides}]{rides }\end{DoxyParamCaption})}
+
+
+
+Obtém o utilizador de uma \#\+Ride. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rides} & A \#\+Ride dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O utilizador da \#\+Ride 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rides_8c_af1db19cdb33b5a6c818a22420dfbcef6}\label{rides_8c_af1db19cdb33b5a6c818a22420dfbcef6}} 
+\index{rides.c@{rides.c}!getUserScore@{getUserScore}}
+\index{getUserScore@{getUserScore}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{getUserScore()}{getUserScore()}}
+{\footnotesize\ttfamily int get\+User\+Score (\begin{DoxyParamCaption}\item[{Rides}]{rides }\end{DoxyParamCaption})}
+
+
+
+Obtém a pontuação de uma \#\+Ride. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rides} & A \#\+Ride dada\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pontuação da \#\+Ride 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rides_8c_a68a7b720329b6ffac0e8d4feb2f25182}\label{rides_8c_a68a7b720329b6ffac0e8d4feb2f25182}} 
+\index{rides.c@{rides.c}!list\_rides\_8@{list\_rides\_8}}
+\index{list\_rides\_8@{list\_rides\_8}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{list\_rides\_8()}{list\_rides\_8()}}
+{\footnotesize\ttfamily GList $\ast$ list\+\_\+rides\+\_\+8 (\begin{DoxyParamCaption}\item[{RIDES\+\_\+\+HT $\ast$}]{lista,  }\item[{DRIVERS\+\_\+\+HT $\ast$}]{lista2,  }\item[{USER\+\_\+\+HT $\ast$}]{lista3,  }\item[{char}]{g,  }\item[{int}]{anos }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que cria uma lista ligada com todas as rides onde o utilizador e o condutor têm o gênero passado como argumento e x ou mais anos de conta. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) das rides \\
+\hline
+{\em lista2} & catálogo (hashtable) das drivers \\
+\hline
+{\em lista3} & catálogo (hashtable) dos users \\
+\hline
+{\em g} & gênero \\
+\hline
+{\em anos} & anos de conta\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A lista ligada com todas as rides onde o utilizador e o condutor têm o gênero passado como argumento e x ou mais anos de conta 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rides_8c_a665bf21094072389a9c80d1728e65ed3}\label{rides_8c_a665bf21094072389a9c80d1728e65ed3}} 
+\index{rides.c@{rides.c}!list\_rides\_9@{list\_rides\_9}}
+\index{list\_rides\_9@{list\_rides\_9}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{list\_rides\_9()}{list\_rides\_9()}}
+{\footnotesize\ttfamily GList $\ast$ list\+\_\+rides\+\_\+9 (\begin{DoxyParamCaption}\item[{RIDES\+\_\+\+HT $\ast$}]{lista,  }\item[{char $\ast$}]{date1,  }\item[{char $\ast$}]{date2 }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que cria uma lista ligada com todas as rides onde a tip é maior que 0 e a data da ride está entre um certo intervalo de tempo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) das rides \\
+\hline
+{\em date1} & uma \#\+Date dada \\
+\hline
+{\em date2} & uma \#\+Date dada\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A lista ligada com todas as rides onde a tip é maior que 0 e a data da ride está entre um certo intervalo de tempo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rides_8c_a1f1fbd692477580e9fbac2800b47af58}\label{rides_8c_a1f1fbd692477580e9fbac2800b47af58}} 
+\index{rides.c@{rides.c}!preco\_medio@{preco\_medio}}
+\index{preco\_medio@{preco\_medio}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{preco\_medio()}{preco\_medio()}}
+{\footnotesize\ttfamily double preco\+\_\+medio (\begin{DoxyParamCaption}\item[{RIDES\+\_\+\+HT $\ast$}]{lista,  }\item[{DRIVERS\+\_\+\+HT $\ast$}]{lista2,  }\item[{char $\ast$}]{cidade }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que calcula Preço médio numa determinada cidade. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) das rides \\
+\hline
+{\em lista2} & catálogo (hashtable) dos drivers \\
+\hline
+{\em cidade} & cidade dada\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+preço médio das viagens numa certa cidade 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rides_8c_a84814302367fe1903ea286e96613cd53}\label{rides_8c_a84814302367fe1903ea286e96613cd53}} 
+\index{rides.c@{rides.c}!preco\_medio\_entre\_datas@{preco\_medio\_entre\_datas}}
+\index{preco\_medio\_entre\_datas@{preco\_medio\_entre\_datas}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{preco\_medio\_entre\_datas()}{preco\_medio\_entre\_datas()}}
+{\footnotesize\ttfamily double preco\+\_\+medio\+\_\+entre\+\_\+datas (\begin{DoxyParamCaption}\item[{RIDES\+\_\+\+HT $\ast$}]{lista,  }\item[{DRIVERS\+\_\+\+HT $\ast$}]{lista2,  }\item[{char $\ast$}]{data1,  }\item[{char $\ast$}]{data2 }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que calcula Preço médio das viagens num dado intervalo de tempo, sendo esse intervalo representado por $<$data A$>$ e $<$data B$>$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) das rides \\
+\hline
+{\em lista2} & catálogo (hashtable) das drivers \\
+\hline
+{\em data1} & data minima \\
+\hline
+{\em dat2} & data máxima\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+preço médio das viagens num dado intrevalo de tempo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rides_8c_a6cc4a962072813c9f18c34e8b0de6926}\label{rides_8c_a6cc4a962072813c9f18c34e8b0de6926}} 
+\index{rides.c@{rides.c}!set@{set}}
+\index{set@{set}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void set (\begin{DoxyParamCaption}\item[{USER\+\_\+\+HT $\ast$}]{lista,  }\item[{DRIVERS\+\_\+\+HT $\ast$}]{lista2,  }\item[{Rides}]{r }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que atualiza algumas variáveis da strust dos drivers e dos users. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) dos users \\
+\hline
+{\em lista2} & catálogo (hashtable) dos drivers \\
+\hline
+{\em r} & ride \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rides_8c_a5cb40423610c95bae7fd951cc9c394a0}\label{rides_8c_a5cb40423610c95bae7fd951cc9c394a0}} 
+\index{rides.c@{rides.c}!setAccountD@{setAccountD}}
+\index{setAccountD@{setAccountD}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{setAccountD()}{setAccountD()}}
+{\footnotesize\ttfamily void set\+AccountD (\begin{DoxyParamCaption}\item[{Rides}]{rides,  }\item[{Date}]{date }\end{DoxyParamCaption})}
+
+
+
+Define a data de criação da conta de um \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rides} & A \#\+Ride dada \\
+\hline
+{\em date} & A \#\+Date de criação \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rides_8c_a7238acee7ef71972b79cdc3812e1e44c}\label{rides_8c_a7238acee7ef71972b79cdc3812e1e44c}} 
+\index{rides.c@{rides.c}!setAccountU@{setAccountU}}
+\index{setAccountU@{setAccountU}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{setAccountU()}{setAccountU()}}
+{\footnotesize\ttfamily void set\+AccountU (\begin{DoxyParamCaption}\item[{Rides}]{rides,  }\item[{Date}]{date }\end{DoxyParamCaption})}
+
+
+
+Define a data de criação da conta de um \#\+User. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rides} & A \#\+Ride dada \\
+\hline
+{\em date} & A \#\+Date de criação \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rides_8c_a05fff6a8881ab9239dc59c45c53bc7d6}\label{rides_8c_a05fff6a8881ab9239dc59c45c53bc7d6}} 
+\index{rides.c@{rides.c}!setCity@{setCity}}
+\index{setCity@{setCity}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{setCity()}{setCity()}}
+{\footnotesize\ttfamily void set\+City (\begin{DoxyParamCaption}\item[{Rides}]{rides,  }\item[{char $\ast$}]{ct }\end{DoxyParamCaption})}
+
+
+
+Define a cidade de uma \#\+Ride. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rides} & A \#\+Ride dada \\
+\hline
+{\em ct} & A cidade da \#\+Ride \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rides_8c_a862d496604e004e0cc760cfecf41dc21}\label{rides_8c_a862d496604e004e0cc760cfecf41dc21}} 
+\index{rides.c@{rides.c}!setComment@{setComment}}
+\index{setComment@{setComment}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{setComment()}{setComment()}}
+{\footnotesize\ttfamily void set\+Comment (\begin{DoxyParamCaption}\item[{Rides}]{rides,  }\item[{char $\ast$}]{cmnt }\end{DoxyParamCaption})}
+
+
+
+Define o comentário de uma \#\+Ride. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rides} & A \#\+Ride dada \\
+\hline
+{\em cmnt} & O comentário da \#\+Ride \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rides_8c_a23b2cd695d3a702da1fb2cef1f04dd76}\label{rides_8c_a23b2cd695d3a702da1fb2cef1f04dd76}} 
+\index{rides.c@{rides.c}!setDate@{setDate}}
+\index{setDate@{setDate}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{setDate()}{setDate()}}
+{\footnotesize\ttfamily void set\+Date (\begin{DoxyParamCaption}\item[{Rides}]{rides,  }\item[{Date}]{date }\end{DoxyParamCaption})}
+
+
+
+Define a data de uma \#\+Ride. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rides} & A \#\+Ride dada \\
+\hline
+{\em date} & A data da \#\+Ride \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rides_8c_a6eb3818cca5d0667c0c64fbb922db85d}\label{rides_8c_a6eb3818cca5d0667c0c64fbb922db85d}} 
+\index{rides.c@{rides.c}!setDistance@{setDistance}}
+\index{setDistance@{setDistance}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{setDistance()}{setDistance()}}
+{\footnotesize\ttfamily void set\+Distance (\begin{DoxyParamCaption}\item[{Rides}]{rides,  }\item[{int}]{dst }\end{DoxyParamCaption})}
+
+
+
+Define distância de uma \#\+Ride. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rides} & A \#\+Ride dada \\
+\hline
+{\em dst} & A distância da \#\+Ride \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rides_8c_a22d15dd744ea3ae159d6f0b65a225a36}\label{rides_8c_a22d15dd744ea3ae159d6f0b65a225a36}} 
+\index{rides.c@{rides.c}!setdriver@{setdriver}}
+\index{setdriver@{setdriver}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{setdriver()}{setdriver()}}
+{\footnotesize\ttfamily void setdriver (\begin{DoxyParamCaption}\item[{Rides}]{rides,  }\item[{int}]{i\+D\+\_\+driver }\end{DoxyParamCaption})}
+
+
+
+Define o driver de uma \#\+Ride. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rides} & A \#\+Ride dada \\
+\hline
+{\em i\+D\+\_\+driver} & O ID de um driver \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rides_8c_a646dc7ed1be9dcd63798d2fea78840b2}\label{rides_8c_a646dc7ed1be9dcd63798d2fea78840b2}} 
+\index{rides.c@{rides.c}!setDriverScore@{setDriverScore}}
+\index{setDriverScore@{setDriverScore}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{setDriverScore()}{setDriverScore()}}
+{\footnotesize\ttfamily void set\+Driver\+Score (\begin{DoxyParamCaption}\item[{Rides}]{rides,  }\item[{int}]{scr }\end{DoxyParamCaption})}
+
+
+
+Define a pontução do driver de uma \#\+Ride. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rides} & A \#\+Ride dada \\
+\hline
+{\em scr} & A pontuação do driver da \#\+Ride \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rides_8c_a64f91a618fca2027aff0a9a6a87aa7b9}\label{rides_8c_a64f91a618fca2027aff0a9a6a87aa7b9}} 
+\index{rides.c@{rides.c}!setIDRides@{setIDRides}}
+\index{setIDRides@{setIDRides}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{setIDRides()}{setIDRides()}}
+{\footnotesize\ttfamily void set\+IDRides (\begin{DoxyParamCaption}\item[{Rides}]{rides,  }\item[{int}]{iD }\end{DoxyParamCaption})}
+
+
+
+Define o ID de uma \#\+Ride. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rides} & A \#\+Ride dada \\
+\hline
+{\em iD} & O ID da \#\+Ride \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rides_8c_a0a1fdf5033492bf615f0a1a4db5769e8}\label{rides_8c_a0a1fdf5033492bf615f0a1a4db5769e8}} 
+\index{rides.c@{rides.c}!setTip@{setTip}}
+\index{setTip@{setTip}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{setTip()}{setTip()}}
+{\footnotesize\ttfamily void set\+Tip (\begin{DoxyParamCaption}\item[{Rides}]{rides,  }\item[{double}]{tp }\end{DoxyParamCaption})}
+
+
+
+Define a tip de uma \#\+Ride. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rides} & A \#\+Ride dada \\
+\hline
+{\em tp} & A tip da \#\+Ride \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rides_8c_afe18b86ef72eaed027c81c44f453e7b1}\label{rides_8c_afe18b86ef72eaed027c81c44f453e7b1}} 
+\index{rides.c@{rides.c}!setUser@{setUser}}
+\index{setUser@{setUser}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{setUser()}{setUser()}}
+{\footnotesize\ttfamily void set\+User (\begin{DoxyParamCaption}\item[{Rides}]{rides,  }\item[{char $\ast$}]{usr }\end{DoxyParamCaption})}
+
+
+
+Define o utilizador de uma \#\+Ride. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rides} & A \#\+Ride dada \\
+\hline
+{\em usr} & O utilizador da \#\+Ride \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rides_8c_a45e1b22e14695412025e97960f6f1a9a}\label{rides_8c_a45e1b22e14695412025e97960f6f1a9a}} 
+\index{rides.c@{rides.c}!setUserScore@{setUserScore}}
+\index{setUserScore@{setUserScore}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{setUserScore()}{setUserScore()}}
+{\footnotesize\ttfamily void set\+User\+Score (\begin{DoxyParamCaption}\item[{Rides}]{rides,  }\item[{int}]{scr }\end{DoxyParamCaption})}
+
+
+
+Define a pontuação de uma \#\+Ride. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rides} & A \#\+Ride dada \\
+\hline
+{\em scr} & A pontuação da \#\+Ride \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rides_8c_a8319d7415360f989c4d4d9c977d3bc4e}\label{rides_8c_a8319d7415360f989c4d4d9c977d3bc4e}} 
+\index{rides.c@{rides.c}!sort\_conta\_mais\_antiga@{sort\_conta\_mais\_antiga}}
+\index{sort\_conta\_mais\_antiga@{sort\_conta\_mais\_antiga}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{sort\_conta\_mais\_antiga()}{sort\_conta\_mais\_antiga()}}
+{\footnotesize\ttfamily GList $\ast$ sort\+\_\+conta\+\_\+mais\+\_\+antiga (\begin{DoxyParamCaption}\item[{RIDES\+\_\+\+HT $\ast$}]{lista,  }\item[{DRIVERS\+\_\+\+HT $\ast$}]{lista2,  }\item[{USER\+\_\+\+HT $\ast$}]{lista3,  }\item[{char}]{g,  }\item[{int}]{anos }\end{DoxyParamCaption})}
+
+
+
+Funcão auxiliar que transforma a hashtable numa lista ligada e ordena-\/a por ordem descrescente da idade da conta. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) das rides \\
+\hline
+{\em lista2} & catálogo (hashtable) das drivers \\
+\hline
+{\em lista3} & catálogo (hashtable) dos users \\
+\hline
+{\em g} & gênero \\
+\hline
+{\em anos} & anos de conta\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A lista ligada ordenada pela idade da conta 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rides_8c_a137ce724e03330d850a5a65838237594}\label{rides_8c_a137ce724e03330d850a5a65838237594}} 
+\index{rides.c@{rides.c}!sort\_menor\_dist@{sort\_menor\_dist}}
+\index{sort\_menor\_dist@{sort\_menor\_dist}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{sort\_menor\_dist()}{sort\_menor\_dist()}}
+{\footnotesize\ttfamily GList $\ast$ sort\+\_\+menor\+\_\+dist (\begin{DoxyParamCaption}\item[{RIDES\+\_\+\+HT $\ast$}]{table,  }\item[{char $\ast$}]{data1,  }\item[{char $\ast$}]{data2 }\end{DoxyParamCaption})}
+
+
+
+Funcão auxiliar que transforma a hashtable numa lista ligada e ordena-\/a por ordem descrescente da distância percorrida. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & catálogo (hashtable) das rides \\
+\hline
+{\em date1} & uma \#\+Date dada \\
+\hline
+{\em date2} & uma \#\+Date dada\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A lista ligada ordenada pela distância percorrida 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rides_8c_a2836ff5b95144c8de1edc3c704e5a974}\label{rides_8c_a2836ff5b95144c8de1edc3c704e5a974}} 
+\index{rides.c@{rides.c}!validDecimal@{validDecimal}}
+\index{validDecimal@{validDecimal}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{validDecimal()}{validDecimal()}}
+{\footnotesize\ttfamily double valid\+Decimal (\begin{DoxyParamCaption}\item[{char $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Função que verifica se uma string corresponde a um número decimal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & string dada\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+valor (val), se o resto for igual a 0 (-\/1), caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rides_8c_aea1eca429b399fd8dacbe66d693a081e}\label{rides_8c_aea1eca429b399fd8dacbe66d693a081e}} 
+\index{rides.c@{rides.c}!validDistance@{validDistance}}
+\index{validDistance@{validDistance}!rides.c@{rides.c}}
+\doxysubsubsection{\texorpdfstring{validDistance()}{validDistance()}}
+{\footnotesize\ttfamily int valid\+Distance (\begin{DoxyParamCaption}\item[{int}]{dst }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que verifica se a distẫncia é válida. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dst} & A distância dada\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1, caso a \textquotesingle{}dst\textquotesingle{} seja maior que 0, 0 caso contrário 
+\end{DoxyReturn}

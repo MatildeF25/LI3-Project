@@ -1,0 +1,265 @@
+\hypertarget{queries_8c}{}\doxysection{/home/matilde/\+Desktop/grupo-\/18/trabalho-\/pratico/src/queries.c File Reference}
+\label{queries_8c}\index{/home/matilde/Desktop/grupo-\/18/trabalho-\/pratico/src/queries.c@{/home/matilde/Desktop/grupo-\/18/trabalho-\/pratico/src/queries.c}}
+{\ttfamily \#include \char`\"{}../include/queries.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{queries_8c_a842ed03f27719bc87666bfd1f75415b8}\label{queries_8c_a842ed03f27719bc87666bfd1f75415b8}} 
+\#define {\bfseries MAX\+\_\+\+LINE}~2048
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{queries_8c_a52c39767f390297925f2dfa196c43860}{q1users}} (USER\+\_\+\+HT $\ast$lista, char $\ast$username, int num)
+\begin{DoxyCompactList}\small\item\em Função que executa query 1 se o argumento for um username de um user e escreve num ficheiro txt a resposta à query 1 pedida no ficheiro de input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{queries_8c_a2cb39bde26be360f4475a4c90b0566bb}{q1driver}} (DRIVERS\+\_\+\+HT $\ast$lista, int id, int num)
+\begin{DoxyCompactList}\small\item\em Função que executa query 1 se o argumento for um id de um driver e escreve num ficheiro txt a resposta à query 1 pedida no ficheiro de input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{queries_8c_a3cdd6618b4fa632d55d6f033c85037c5}{q2}} (DRIVERS\+\_\+\+HT $\ast$lista, int N, int num)
+\begin{DoxyCompactList}\small\item\em Função que executa query 2 e escreve num ficheiro txt a resposta à query 2 pedida no ficheiro de input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{queries_8c_a960de42e9e81351d7139d1bb00d7270f}{q3}} (USER\+\_\+\+HT $\ast$lista, int N, int num)
+\begin{DoxyCompactList}\small\item\em Função que executa query 3 e escreve num ficheiro txt a resposta à query 3 pedida no ficheiro de input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{queries_8c_ab9c5c22a82bedda2b1bd7878028b9cbb}{q4}} (RIDES\+\_\+\+HT $\ast$lista, DRIVERS\+\_\+\+HT $\ast$lista2, char $\ast$cidade, int num)
+\begin{DoxyCompactList}\small\item\em Função que executa query 4 e escreve num ficheiro txt a resposta à query 4 pedida no ficheiro de input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{queries_8c_aa0ee06801d1f07c282d9a8bd103247f3}{q5}} (RIDES\+\_\+\+HT $\ast$lista, DRIVERS\+\_\+\+HT $\ast$lista2, char $\ast$data1, char $\ast$data2, int num)
+\begin{DoxyCompactList}\small\item\em Função que executa query 5 e escreve num ficheiro txt a resposta à query 5 pedida no ficheiro de input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{queries_8c_a3d33261842c0674c427dc714ba1bb601}{q6}} (RIDES\+\_\+\+HT $\ast$lista, char $\ast$cidade, char $\ast$data1, char $\ast$data2, int num)
+\begin{DoxyCompactList}\small\item\em Função que executa query 6 e escreve num ficheiro txt a resposta à query 6 pedida no ficheiro de input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{queries_8c_a27c28a410367f04e334db6c551f87311}{q7\+\_\+vazia}} (DRIVERS\+\_\+\+HT $\ast$lista, int N, int num)
+\begin{DoxyCompactList}\small\item\em Função que executa query 7 caso o input dado não tenha nenhum resultado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{queries_8c_a494cb068e642414f176a42e1e68d31c4}{q7}} (DRIVERS\+\_\+\+HT $\ast$lista, int N, int num)
+\begin{DoxyCompactList}\small\item\em Função que executa query 7 e escreve num ficheiro txt a resposta à query 7 pedida no ficheiro de input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{queries_8c_a04431708c69e9fe167d0ca579c3d43e3}{q8}} (RIDES\+\_\+\+HT $\ast$lista, DRIVERS\+\_\+\+HT $\ast$lista2, USER\+\_\+\+HT $\ast$lista3, char g, int anos, int num)
+\begin{DoxyCompactList}\small\item\em Função que executa query 8 e escreve num ficheiro txt a resposta à query 8 pedida no ficheiro de input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{queries_8c_a66c08380831e99a3a3c36149ebc02d59}{q9}} (RIDES\+\_\+\+HT $\ast$lista, char $\ast$data1, char $\ast$data2, int num)
+\begin{DoxyCompactList}\small\item\em Função que executa query 9 e escreve num ficheiro txt a resposta à query 9 pedida no ficheiro de input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Este ficheiro contém as funções que executam as queries 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{queries_8c_a2cb39bde26be360f4475a4c90b0566bb}\label{queries_8c_a2cb39bde26be360f4475a4c90b0566bb}} 
+\index{queries.c@{queries.c}!q1driver@{q1driver}}
+\index{q1driver@{q1driver}!queries.c@{queries.c}}
+\doxysubsubsection{\texorpdfstring{q1driver()}{q1driver()}}
+{\footnotesize\ttfamily void q1driver (\begin{DoxyParamCaption}\item[{DRIVERS\+\_\+\+HT $\ast$}]{lista,  }\item[{int}]{id,  }\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Função que executa query 1 se o argumento for um id de um driver e escreve num ficheiro txt a resposta à query 1 pedida no ficheiro de input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) dos drivers \\
+\hline
+{\em id} & inteiro que será o id (drivers.\+csv) \\
+\hline
+{\em num} & numero da linha do ficheiro input que está a ser lida \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{queries_8c_a52c39767f390297925f2dfa196c43860}\label{queries_8c_a52c39767f390297925f2dfa196c43860}} 
+\index{queries.c@{queries.c}!q1users@{q1users}}
+\index{q1users@{q1users}!queries.c@{queries.c}}
+\doxysubsubsection{\texorpdfstring{q1users()}{q1users()}}
+{\footnotesize\ttfamily void q1users (\begin{DoxyParamCaption}\item[{USER\+\_\+\+HT $\ast$}]{lista,  }\item[{char $\ast$}]{username,  }\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Função que executa query 1 se o argumento for um username de um user e escreve num ficheiro txt a resposta à query 1 pedida no ficheiro de input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) dos users \\
+\hline
+{\em username} & string que será o username (users.\+csv) \\
+\hline
+{\em num} & numero da linha do ficheiro input que está a ser lida \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{queries_8c_a3cdd6618b4fa632d55d6f033c85037c5}\label{queries_8c_a3cdd6618b4fa632d55d6f033c85037c5}} 
+\index{queries.c@{queries.c}!q2@{q2}}
+\index{q2@{q2}!queries.c@{queries.c}}
+\doxysubsubsection{\texorpdfstring{q2()}{q2()}}
+{\footnotesize\ttfamily void q2 (\begin{DoxyParamCaption}\item[{DRIVERS\+\_\+\+HT $\ast$}]{lista,  }\item[{int}]{N,  }\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Função que executa query 2 e escreve num ficheiro txt a resposta à query 2 pedida no ficheiro de input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) dos drivers \\
+\hline
+{\em N} & Número de vezes que o loop irá iterar e escrever informações sobre os drivers no ficheiro de output. \\
+\hline
+{\em num} & numero da linha do ficheiro input que está a ser lida \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{queries_8c_a960de42e9e81351d7139d1bb00d7270f}\label{queries_8c_a960de42e9e81351d7139d1bb00d7270f}} 
+\index{queries.c@{queries.c}!q3@{q3}}
+\index{q3@{q3}!queries.c@{queries.c}}
+\doxysubsubsection{\texorpdfstring{q3()}{q3()}}
+{\footnotesize\ttfamily void q3 (\begin{DoxyParamCaption}\item[{USER\+\_\+\+HT $\ast$}]{lista,  }\item[{int}]{N,  }\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Função que executa query 3 e escreve num ficheiro txt a resposta à query 3 pedida no ficheiro de input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) dos users \\
+\hline
+{\em N} & Número de vezes que o loop irá iterar e escrever informações sobre os users no ficheiro de output. \\
+\hline
+{\em num} & numero da linha do ficheiro input que está a ser lida \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{queries_8c_ab9c5c22a82bedda2b1bd7878028b9cbb}\label{queries_8c_ab9c5c22a82bedda2b1bd7878028b9cbb}} 
+\index{queries.c@{queries.c}!q4@{q4}}
+\index{q4@{q4}!queries.c@{queries.c}}
+\doxysubsubsection{\texorpdfstring{q4()}{q4()}}
+{\footnotesize\ttfamily void q4 (\begin{DoxyParamCaption}\item[{RIDES\+\_\+\+HT $\ast$}]{lista,  }\item[{DRIVERS\+\_\+\+HT $\ast$}]{lista2,  }\item[{char $\ast$}]{cidade,  }\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Função que executa query 4 e escreve num ficheiro txt a resposta à query 4 pedida no ficheiro de input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) das rides \\
+\hline
+{\em lista2} & catálogo (hashtable) dos drivers \\
+\hline
+{\em cidade} & string que será a cidade (rides.\+csv) \\
+\hline
+{\em num} & numero da linha do ficheiro input que está a ser lida \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{queries_8c_aa0ee06801d1f07c282d9a8bd103247f3}\label{queries_8c_aa0ee06801d1f07c282d9a8bd103247f3}} 
+\index{queries.c@{queries.c}!q5@{q5}}
+\index{q5@{q5}!queries.c@{queries.c}}
+\doxysubsubsection{\texorpdfstring{q5()}{q5()}}
+{\footnotesize\ttfamily void q5 (\begin{DoxyParamCaption}\item[{RIDES\+\_\+\+HT $\ast$}]{lista,  }\item[{DRIVERS\+\_\+\+HT $\ast$}]{lista2,  }\item[{char $\ast$}]{data1,  }\item[{char $\ast$}]{data2,  }\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Função que executa query 5 e escreve num ficheiro txt a resposta à query 5 pedida no ficheiro de input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) das rides \\
+\hline
+{\em lista2} & catálogo (hashtable) dos drivers \\
+\hline
+{\em data1} & limite inferior do intervalo de tempo dado \\
+\hline
+{\em data2} & limite superior do intervalo de tempo dado \\
+\hline
+{\em num} & numero da linha do ficheiro input que está a ser lida \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{queries_8c_a3d33261842c0674c427dc714ba1bb601}\label{queries_8c_a3d33261842c0674c427dc714ba1bb601}} 
+\index{queries.c@{queries.c}!q6@{q6}}
+\index{q6@{q6}!queries.c@{queries.c}}
+\doxysubsubsection{\texorpdfstring{q6()}{q6()}}
+{\footnotesize\ttfamily void q6 (\begin{DoxyParamCaption}\item[{RIDES\+\_\+\+HT $\ast$}]{lista,  }\item[{char $\ast$}]{cidade,  }\item[{char $\ast$}]{data1,  }\item[{char $\ast$}]{data2,  }\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Função que executa query 6 e escreve num ficheiro txt a resposta à query 6 pedida no ficheiro de input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) das rides \\
+\hline
+{\em cidade} & string que será a cidade (rides.\+csv) \\
+\hline
+{\em data1} & limite inferior do intervalo de tempo dado \\
+\hline
+{\em data2} & limite superior do intervalo de tempo dado \\
+\hline
+{\em num} & numero da linha do ficheiro input que está a ser lida \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{queries_8c_a494cb068e642414f176a42e1e68d31c4}\label{queries_8c_a494cb068e642414f176a42e1e68d31c4}} 
+\index{queries.c@{queries.c}!q7@{q7}}
+\index{q7@{q7}!queries.c@{queries.c}}
+\doxysubsubsection{\texorpdfstring{q7()}{q7()}}
+{\footnotesize\ttfamily void q7 (\begin{DoxyParamCaption}\item[{DRIVERS\+\_\+\+HT $\ast$}]{lista,  }\item[{int}]{N,  }\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Função que executa query 7 e escreve num ficheiro txt a resposta à query 7 pedida no ficheiro de input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) dos drivers \\
+\hline
+{\em N} & Número de vezes que o loop irá iterar e escrever informações sobre os drivers no ficheiro de output. \\
+\hline
+{\em num} & numero da linha do ficheiro input que está a ser lida \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{queries_8c_a27c28a410367f04e334db6c551f87311}\label{queries_8c_a27c28a410367f04e334db6c551f87311}} 
+\index{queries.c@{queries.c}!q7\_vazia@{q7\_vazia}}
+\index{q7\_vazia@{q7\_vazia}!queries.c@{queries.c}}
+\doxysubsubsection{\texorpdfstring{q7\_vazia()}{q7\_vazia()}}
+{\footnotesize\ttfamily void q7\+\_\+vazia (\begin{DoxyParamCaption}\item[{DRIVERS\+\_\+\+HT $\ast$}]{lista,  }\item[{int}]{N,  }\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Função que executa query 7 caso o input dado não tenha nenhum resultado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) dos drivers \\
+\hline
+{\em N} & Número de vezes que o loop irá iterar e escrever uma linha vazia no ficheiro de output. \\
+\hline
+{\em num} & numero da linha do ficheiro input que está a ser lida \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{queries_8c_a04431708c69e9fe167d0ca579c3d43e3}\label{queries_8c_a04431708c69e9fe167d0ca579c3d43e3}} 
+\index{queries.c@{queries.c}!q8@{q8}}
+\index{q8@{q8}!queries.c@{queries.c}}
+\doxysubsubsection{\texorpdfstring{q8()}{q8()}}
+{\footnotesize\ttfamily void q8 (\begin{DoxyParamCaption}\item[{RIDES\+\_\+\+HT $\ast$}]{lista,  }\item[{DRIVERS\+\_\+\+HT $\ast$}]{lista2,  }\item[{USER\+\_\+\+HT $\ast$}]{lista3,  }\item[{char}]{g,  }\item[{int}]{anos,  }\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Função que executa query 8 e escreve num ficheiro txt a resposta à query 8 pedida no ficheiro de input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) das rides \\
+\hline
+{\em lista2} & catálogo (hashtable) dos drivers \\
+\hline
+{\em g} & género dado como argumento \\
+\hline
+{\em anos} & número de anos dado como argumento que uma conta deve ter \\
+\hline
+{\em num} & numero da linha do ficheiro input que está a ser lida \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{queries_8c_a66c08380831e99a3a3c36149ebc02d59}\label{queries_8c_a66c08380831e99a3a3c36149ebc02d59}} 
+\index{queries.c@{queries.c}!q9@{q9}}
+\index{q9@{q9}!queries.c@{queries.c}}
+\doxysubsubsection{\texorpdfstring{q9()}{q9()}}
+{\footnotesize\ttfamily void q9 (\begin{DoxyParamCaption}\item[{RIDES\+\_\+\+HT $\ast$}]{lista,  }\item[{char $\ast$}]{data1,  }\item[{char $\ast$}]{data2,  }\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Função que executa query 9 e escreve num ficheiro txt a resposta à query 9 pedida no ficheiro de input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) das rides \\
+\hline
+{\em data1} & limite inferior do intervalo de tempo dado \\
+\hline
+{\em data2} & limite superior do intervalo de tempo dado \\
+\hline
+{\em num} & numero da linha do ficheiro input que está a ser lida \\
+\hline
+\end{DoxyParams}

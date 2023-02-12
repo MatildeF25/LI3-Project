@@ -1,0 +1,359 @@
+\hypertarget{date_8c}{}\doxysection{/home/matilde/\+Desktop/grupo-\/18/trabalho-\/pratico/src/date.c File Reference}
+\label{date_8c}\index{/home/matilde/Desktop/grupo-\/18/trabalho-\/pratico/src/date.c@{/home/matilde/Desktop/grupo-\/18/trabalho-\/pratico/src/date.c}}
+{\ttfamily \#include \char`\"{}../include/date.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdate}{date}}
+\begin{DoxyCompactList}\small\item\em Type usado para definir uma data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{date_8c_a6cb865f5d5e5bed7a4ccb4f3aee9fa57}\label{date_8c_a6cb865f5d5e5bed7a4ccb4f3aee9fa57}} 
+\#define {\bfseries ref\+\_\+date}~\{0,0,0,9,10,2022,0,0,0,0\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{date_8c_a97e6e3b8dde72402102a60afc5482a7a}{compare\+Dates}} (Date date1, Date date2)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que compara duas \#\+Date. \end{DoxyCompactList}\item 
+Date \mbox{\hyperlink{date_8c_ad5e80e73fa774d2e471fa94630960f14}{valid\+\_\+date}} (char $\ast$date\+\_\+str)
+\begin{DoxyCompactList}\small\item\em função que verifica se uma data está válida \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{date_8c_a7958c5dfde17e8ae600fa499bf5aea9e}{set\+Date1}} (Date \mbox{\hyperlink{structdate}{date}}, char $\ast$day, char $\ast$month, char $\ast$year)
+\begin{DoxyCompactList}\small\item\em Define o dia(day), mês(month), ou ano(year) de um \#\+Date. \end{DoxyCompactList}\item 
+Date \mbox{\hyperlink{date_8c_a2880f3c65346ff052e7fb2f33a847a08}{copy\+Date}} (Date \mbox{\hyperlink{structdate}{date}})
+\begin{DoxyCompactList}\small\item\em função que copia uma data (objetivo de uso é encapsulamento) \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{date_8c_aa1e0653f1c9fda96cbc3c8bdab67c85c}{get\+Date\+Day}} (Date \mbox{\hyperlink{structdate}{date}})
+\begin{DoxyCompactList}\small\item\em Obtém o dia de um \#\+Date. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{date_8c_a00cbf0f60676c9c5e9cb77b6f526fab3}{get\+Date\+Month}} (Date \mbox{\hyperlink{structdate}{date}})
+\begin{DoxyCompactList}\small\item\em Obtém o mês de um \#\+Date. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{date_8c_ac2accd4efcb4f2677c7210a20e64bd64}{get\+Date\+Year}} (Date \mbox{\hyperlink{structdate}{date}})
+\begin{DoxyCompactList}\small\item\em Obtém o ano de um \#\+Date. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{date_8c_a3bf6d0eeb2e95065a58d19c0a23f6083}{set\+Date\+Day}} (Date \mbox{\hyperlink{structdate}{date}}, char $\ast$day)
+\begin{DoxyCompactList}\small\item\em Define o dia de um \#\+Date. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{date_8c_a89ff04f16d221128962b37293e1573e3}{set\+Date\+Month}} (Date \mbox{\hyperlink{structdate}{date}}, char $\ast$month)
+\begin{DoxyCompactList}\small\item\em Define o mês de um \#\+Date. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{date_8c_a8fe48228e913e40c738e3f486816f6b1}{set\+Date\+Year}} (Date \mbox{\hyperlink{structdate}{date}}, char $\ast$year)
+\begin{DoxyCompactList}\small\item\em Define o ano de um \#\+Date. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{date_8c_a4f25e92c4ae5229a143ae974161477a2}{convert\+\_\+date\+\_\+to\+\_\+string}} (Date \mbox{\hyperlink{structdate}{date}})
+\begin{DoxyCompactList}\small\item\em Função que converte um type date para uma string. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{date_8c_a6ddc5058dd0087d3249913b305fceb4a}{idade}} (Date \mbox{\hyperlink{structdate}{date}})
+\begin{DoxyCompactList}\small\item\em Função auxiliar que calcula a idade de um indivíduo a partir da data de nascimento. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{date_8c_a1f4d560c7b12a1fdc44ae9bc719e625b}{menor}} (Date data1, Date data2)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que verifica a data mais recente. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{date_8c_a3089ec72eb19aa86a6e5b87f1a8e62e6}{entre\+\_\+datas}} (Date \mbox{\hyperlink{structdate}{date}}, Date date1, Date date2)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que verifica se uma \#\+Date está entre outras duas. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{date_8c_a0c2caffc5fc85a988c445dddfc67cb03}{entre\+\_\+datas\+\_\+incluindo}} (Date \mbox{\hyperlink{structdate}{date}}, Date date1, Date date2)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que verifica se uma \#\+Date está entre outras duas, sendo que se for igual, a data é incluída na solução. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{date_8c_a6b42d189a3caef8c745fa2edc95e5a7d}{datas\+\_\+iguais}} (Date date1, Date date2)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que verifica se as datas são iguais. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Este ficheiro contém a implementação do tipo \#\+Date
+
+O tipo \#\+Date é usado para representar a data ou tempo 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{date_8c_a97e6e3b8dde72402102a60afc5482a7a}\label{date_8c_a97e6e3b8dde72402102a60afc5482a7a}} 
+\index{date.c@{date.c}!compareDates@{compareDates}}
+\index{compareDates@{compareDates}!date.c@{date.c}}
+\doxysubsubsection{\texorpdfstring{compareDates()}{compareDates()}}
+{\footnotesize\ttfamily int compare\+Dates (\begin{DoxyParamCaption}\item[{Date}]{date1,  }\item[{Date}]{date2 }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que compara duas \#\+Date. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date1} & Primeira \#\+Date \\
+\hline
+{\em date2} & Segunda \#\+Date \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\textquotesingle{}0\textquotesingle{} se date1 == date2, -\/1 se data1 for antes da data2 e 1 caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{date_8c_a4f25e92c4ae5229a143ae974161477a2}\label{date_8c_a4f25e92c4ae5229a143ae974161477a2}} 
+\index{date.c@{date.c}!convert\_date\_to\_string@{convert\_date\_to\_string}}
+\index{convert\_date\_to\_string@{convert\_date\_to\_string}!date.c@{date.c}}
+\doxysubsubsection{\texorpdfstring{convert\_date\_to\_string()}{convert\_date\_to\_string()}}
+{\footnotesize\ttfamily char $\ast$ convert\+\_\+date\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{Date}]{date }\end{DoxyParamCaption})}
+
+
+
+Função que converte um type date para uma string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & \#\+Date dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A mesma data mas em string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{date_8c_a2880f3c65346ff052e7fb2f33a847a08}\label{date_8c_a2880f3c65346ff052e7fb2f33a847a08}} 
+\index{date.c@{date.c}!copyDate@{copyDate}}
+\index{copyDate@{copyDate}!date.c@{date.c}}
+\doxysubsubsection{\texorpdfstring{copyDate()}{copyDate()}}
+{\footnotesize\ttfamily Date copy\+Date (\begin{DoxyParamCaption}\item[{Date}]{date }\end{DoxyParamCaption})}
+
+
+
+função que copia uma data (objetivo de uso é encapsulamento) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cópia da data desejada 
+\end{DoxyReturn}
+\mbox{\Hypertarget{date_8c_a6b42d189a3caef8c745fa2edc95e5a7d}\label{date_8c_a6b42d189a3caef8c745fa2edc95e5a7d}} 
+\index{date.c@{date.c}!datas\_iguais@{datas\_iguais}}
+\index{datas\_iguais@{datas\_iguais}!date.c@{date.c}}
+\doxysubsubsection{\texorpdfstring{datas\_iguais()}{datas\_iguais()}}
+{\footnotesize\ttfamily int datas\+\_\+iguais (\begin{DoxyParamCaption}\item[{Date}]{date1,  }\item[{Date}]{date2 }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que verifica se as datas são iguais. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date1} & \#\+Date \\
+\hline
+{\em date2} & \#\+Date\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna \textquotesingle{}1\textquotesingle{} se as datas forem iguais e \textquotesingle{}0\textquotesingle{} se as datas forem diferentes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{date_8c_a3089ec72eb19aa86a6e5b87f1a8e62e6}\label{date_8c_a3089ec72eb19aa86a6e5b87f1a8e62e6}} 
+\index{date.c@{date.c}!entre\_datas@{entre\_datas}}
+\index{entre\_datas@{entre\_datas}!date.c@{date.c}}
+\doxysubsubsection{\texorpdfstring{entre\_datas()}{entre\_datas()}}
+{\footnotesize\ttfamily int entre\+\_\+datas (\begin{DoxyParamCaption}\item[{Date}]{date,  }\item[{Date}]{date1,  }\item[{Date}]{date2 }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que verifica se uma \#\+Date está entre outras duas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & \#\+Date dado \\
+\hline
+{\em date1} & \#\+Date minima \\
+\hline
+{\em date2} & \#\+Date maxima\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna 1 se estiver \char`\"{}date\char`\"{} entre a \char`\"{}date1\char`\"{} e a \char`\"{}date2\char`\"{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{date_8c_a0c2caffc5fc85a988c445dddfc67cb03}\label{date_8c_a0c2caffc5fc85a988c445dddfc67cb03}} 
+\index{date.c@{date.c}!entre\_datas\_incluindo@{entre\_datas\_incluindo}}
+\index{entre\_datas\_incluindo@{entre\_datas\_incluindo}!date.c@{date.c}}
+\doxysubsubsection{\texorpdfstring{entre\_datas\_incluindo()}{entre\_datas\_incluindo()}}
+{\footnotesize\ttfamily int entre\+\_\+datas\+\_\+incluindo (\begin{DoxyParamCaption}\item[{Date}]{date,  }\item[{Date}]{date1,  }\item[{Date}]{date2 }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que verifica se uma \#\+Date está entre outras duas, sendo que se for igual, a data é incluída na solução. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & \#\+Date dado \\
+\hline
+{\em date1} & \#\+Date minima \\
+\hline
+{\em date2} & \#\+Date maxima\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna 1 se estiver \char`\"{}date\char`\"{} entre a \char`\"{}date1\char`\"{} e a \char`\"{}date2\char`\"{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{date_8c_aa1e0653f1c9fda96cbc3c8bdab67c85c}\label{date_8c_aa1e0653f1c9fda96cbc3c8bdab67c85c}} 
+\index{date.c@{date.c}!getDateDay@{getDateDay}}
+\index{getDateDay@{getDateDay}!date.c@{date.c}}
+\doxysubsubsection{\texorpdfstring{getDateDay()}{getDateDay()}}
+{\footnotesize\ttfamily char $\ast$ get\+Date\+Day (\begin{DoxyParamCaption}\item[{Date}]{date }\end{DoxyParamCaption})}
+
+
+
+Obtém o dia de um \#\+Date. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & \#\+Date dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O dia do \#\+Date 
+\end{DoxyReturn}
+\mbox{\Hypertarget{date_8c_a00cbf0f60676c9c5e9cb77b6f526fab3}\label{date_8c_a00cbf0f60676c9c5e9cb77b6f526fab3}} 
+\index{date.c@{date.c}!getDateMonth@{getDateMonth}}
+\index{getDateMonth@{getDateMonth}!date.c@{date.c}}
+\doxysubsubsection{\texorpdfstring{getDateMonth()}{getDateMonth()}}
+{\footnotesize\ttfamily char $\ast$ get\+Date\+Month (\begin{DoxyParamCaption}\item[{Date}]{date }\end{DoxyParamCaption})}
+
+
+
+Obtém o mês de um \#\+Date. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & \#\+Date dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O mês do \#\+Date 
+\end{DoxyReturn}
+\mbox{\Hypertarget{date_8c_ac2accd4efcb4f2677c7210a20e64bd64}\label{date_8c_ac2accd4efcb4f2677c7210a20e64bd64}} 
+\index{date.c@{date.c}!getDateYear@{getDateYear}}
+\index{getDateYear@{getDateYear}!date.c@{date.c}}
+\doxysubsubsection{\texorpdfstring{getDateYear()}{getDateYear()}}
+{\footnotesize\ttfamily char $\ast$ get\+Date\+Year (\begin{DoxyParamCaption}\item[{Date}]{date }\end{DoxyParamCaption})}
+
+
+
+Obtém o ano de um \#\+Date. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & \#\+Date dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O ano do \#\+Date 
+\end{DoxyReturn}
+\mbox{\Hypertarget{date_8c_a6ddc5058dd0087d3249913b305fceb4a}\label{date_8c_a6ddc5058dd0087d3249913b305fceb4a}} 
+\index{date.c@{date.c}!idade@{idade}}
+\index{idade@{idade}!date.c@{date.c}}
+\doxysubsubsection{\texorpdfstring{idade()}{idade()}}
+{\footnotesize\ttfamily int idade (\begin{DoxyParamCaption}\item[{Date}]{date }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que calcula a idade de um indivíduo a partir da data de nascimento. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & \#\+Date dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+idade 
+\end{DoxyReturn}
+\mbox{\Hypertarget{date_8c_a1f4d560c7b12a1fdc44ae9bc719e625b}\label{date_8c_a1f4d560c7b12a1fdc44ae9bc719e625b}} 
+\index{date.c@{date.c}!menor@{menor}}
+\index{menor@{menor}!date.c@{date.c}}
+\doxysubsubsection{\texorpdfstring{menor()}{menor()}}
+{\footnotesize\ttfamily int menor (\begin{DoxyParamCaption}\item[{Date}]{data1,  }\item[{Date}]{data2 }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que verifica a data mais recente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data1} & \#\+Date \\
+\hline
+{\em data2} & \#\+Date\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna \textquotesingle{}1\textquotesingle{} se a \char`\"{}data1\char`\"{} for anterior à \char`\"{}data2\char`\"{} (return 0 caso contrário) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{date_8c_a7958c5dfde17e8ae600fa499bf5aea9e}\label{date_8c_a7958c5dfde17e8ae600fa499bf5aea9e}} 
+\index{date.c@{date.c}!setDate1@{setDate1}}
+\index{setDate1@{setDate1}!date.c@{date.c}}
+\doxysubsubsection{\texorpdfstring{setDate1()}{setDate1()}}
+{\footnotesize\ttfamily void set\+Date1 (\begin{DoxyParamCaption}\item[{Date}]{date,  }\item[{char $\ast$}]{day,  }\item[{char $\ast$}]{month,  }\item[{char $\ast$}]{year }\end{DoxyParamCaption})}
+
+
+
+Define o dia(day), mês(month), ou ano(year) de um \#\+Date. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & O \#\+Date dado \\
+\hline
+{\em day} & O novo dia do \#\+Date \\
+\hline
+{\em month} & O novo mês dp \#\+Date \\
+\hline
+{\em year} & O novo ano do \#\+Date \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{date_8c_a3bf6d0eeb2e95065a58d19c0a23f6083}\label{date_8c_a3bf6d0eeb2e95065a58d19c0a23f6083}} 
+\index{date.c@{date.c}!setDateDay@{setDateDay}}
+\index{setDateDay@{setDateDay}!date.c@{date.c}}
+\doxysubsubsection{\texorpdfstring{setDateDay()}{setDateDay()}}
+{\footnotesize\ttfamily void set\+Date\+Day (\begin{DoxyParamCaption}\item[{Date}]{date,  }\item[{char $\ast$}]{day }\end{DoxyParamCaption})}
+
+
+
+Define o dia de um \#\+Date. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & \#\+Date dado \\
+\hline
+{\em day} & O novo dia do \#\+Date \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{date_8c_a89ff04f16d221128962b37293e1573e3}\label{date_8c_a89ff04f16d221128962b37293e1573e3}} 
+\index{date.c@{date.c}!setDateMonth@{setDateMonth}}
+\index{setDateMonth@{setDateMonth}!date.c@{date.c}}
+\doxysubsubsection{\texorpdfstring{setDateMonth()}{setDateMonth()}}
+{\footnotesize\ttfamily void set\+Date\+Month (\begin{DoxyParamCaption}\item[{Date}]{date,  }\item[{char $\ast$}]{month }\end{DoxyParamCaption})}
+
+
+
+Define o mês de um \#\+Date. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & \#\+Date dado \\
+\hline
+{\em month} & O novo mês do \#\+Date \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{date_8c_a8fe48228e913e40c738e3f486816f6b1}\label{date_8c_a8fe48228e913e40c738e3f486816f6b1}} 
+\index{date.c@{date.c}!setDateYear@{setDateYear}}
+\index{setDateYear@{setDateYear}!date.c@{date.c}}
+\doxysubsubsection{\texorpdfstring{setDateYear()}{setDateYear()}}
+{\footnotesize\ttfamily void set\+Date\+Year (\begin{DoxyParamCaption}\item[{Date}]{date,  }\item[{char $\ast$}]{year }\end{DoxyParamCaption})}
+
+
+
+Define o ano de um \#\+Date. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & \#\+Date dado \\
+\hline
+{\em year} & O novo ano do \#\+Date \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{date_8c_ad5e80e73fa774d2e471fa94630960f14}\label{date_8c_ad5e80e73fa774d2e471fa94630960f14}} 
+\index{date.c@{date.c}!valid\_date@{valid\_date}}
+\index{valid\_date@{valid\_date}!date.c@{date.c}}
+\doxysubsubsection{\texorpdfstring{valid\_date()}{valid\_date()}}
+{\footnotesize\ttfamily Date valid\+\_\+date (\begin{DoxyParamCaption}\item[{char $\ast$}]{date\+\_\+str }\end{DoxyParamCaption})}
+
+
+
+função que verifica se uma data está válida 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uma} & data (string)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a mesma data se esta for válida 
+\end{DoxyReturn}

@@ -1,0 +1,917 @@
+\hypertarget{drivers_8c}{}\doxysection{/home/matilde/\+Desktop/grupo-\/18/trabalho-\/pratico/src/drivers.c File Reference}
+\label{drivers_8c}\index{/home/matilde/Desktop/grupo-\/18/trabalho-\/pratico/src/drivers.c@{/home/matilde/Desktop/grupo-\/18/trabalho-\/pratico/src/drivers.c}}
+{\ttfamily \#include \char`\"{}../include/drivers.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdriver}{driver}}
+\begin{DoxyCompactList}\small\item\em Type usado para definir um driver. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdrivers__ht}{drivers\+\_\+ht}}
+\begin{DoxyCompactList}\small\item\em definição de uma hashtable para os drivers \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{drivers_8c_a1e2e152d4d4eec649dd7e4aacd6add90}\label{drivers_8c_a1e2e152d4d4eec649dd7e4aacd6add90}} 
+\#define {\bfseries FREE}(algo)~if (algo) free(algo)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{drivers_8c_ae5e2ce48902a574feb4b3823bc251b51}{set\+ID}} (Driver \mbox{\hyperlink{structdriver}{driver}}, int drvid)
+\begin{DoxyCompactList}\small\item\em Define o ID do \#\+Driver. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{drivers_8c_acdcfb224553e5b33543a1ce9b8d11ac8}{get\+ID}} (Driver \mbox{\hyperlink{structdriver}{driver}})
+\begin{DoxyCompactList}\small\item\em Obtém o ID de um \#\+Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{drivers_8c_a238a3d8d80489e44aff0972e5bb2fdc1}{set\+Driver\+Name}} (Driver \mbox{\hyperlink{structdriver}{driver}}, char $\ast$nm)
+\begin{DoxyCompactList}\small\item\em Define o nome do \#\+Driver. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{drivers_8c_acb304785024fff5215a6d6efba00c1d3}{get\+Driver\+Name}} (Driver \mbox{\hyperlink{structdriver}{driver}})
+\begin{DoxyCompactList}\small\item\em Obtém o nome de um \#\+Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{drivers_8c_a6204d640b63bf9ae650f1f6a459689f2}{set\+Birth\+Day}} (Driver \mbox{\hyperlink{structdriver}{driver}}, Date \mbox{\hyperlink{structdate}{date}})
+\begin{DoxyCompactList}\small\item\em Define o o dia de aniversário do \#\+Driver. \end{DoxyCompactList}\item 
+Date \mbox{\hyperlink{drivers_8c_ae0c1607db6ee857ac835a79c8fd062fd}{get\+Birth\+Day}} (Driver \mbox{\hyperlink{structdriver}{driver}})
+\begin{DoxyCompactList}\small\item\em Obtém o dia de aniversário de um \#\+Driver. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{drivers_8c_ac7765fa202c53145998579f681ad9e2b}{valid\+Driver\+Gender}} (char gndr)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que verifica se o género é válido. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{drivers_8c_a95661691ec60f74abcb1f801f893bd67}{set\+Driver\+Gender}} (Driver \mbox{\hyperlink{structdriver}{driver}}, char gndr)
+\begin{DoxyCompactList}\small\item\em Define o genero do \#\+Driver. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{drivers_8c_a317f3bd199c3ab787f622c1534401147}{get\+Driver\+Gender}} (Driver \mbox{\hyperlink{structdriver}{driver}})
+\begin{DoxyCompactList}\small\item\em Obtém o genero de um \#\+Driver. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{drivers_8c_a3f8b19a6576922205069a44a577441e8}{valid\+Car\+Class}} (char $\ast$cc)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que verifica se a classe do carro é válida. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{drivers_8c_a2fcad9872c169e81dc15e61d01cee2c4}{set\+Car\+Class}} (Driver \mbox{\hyperlink{structdriver}{driver}}, char $\ast$cc)
+\begin{DoxyCompactList}\small\item\em Define classe do carro do \#\+Driver. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{drivers_8c_a98c99d3aa677207a2cc8729c8313d5cd}{get\+Car\+Class}} (Driver \mbox{\hyperlink{structdriver}{driver}})
+\begin{DoxyCompactList}\small\item\em Obtém a classe do carro de um \#\+Driver. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{drivers_8c_a6f3069d816d57741b030c85fd95b71b6}{is\+Digit}} (char a)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que verifica se um char é um digito. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{drivers_8c_a3ed3dc164705cd198d24098596ba2666}{is\+Letter}} (char a)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que verifica se um char é uma letra. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{drivers_8c_af95e8a76630f5b7d9b949620807c972f}{is\+Valid\+License\+Plate}} (char $\ast$lp)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que verifica se a matricula é válida. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{drivers_8c_a1dc48d510963d4fd06898fd42f05dbaa}{set\+Driver\+City}} (Driver \mbox{\hyperlink{structdriver}{driver}}, char $\ast$ct)
+\begin{DoxyCompactList}\small\item\em Define a cidade do \#\+Driver. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{drivers_8c_a415974c55fbb9f84a977d7d60741d95d}{get\+Driver\+City}} (Driver \mbox{\hyperlink{structdriver}{driver}})
+\begin{DoxyCompactList}\small\item\em Obtém a cidade de um \#\+Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{drivers_8c_a9bdfe12f007b74a620bff23e925dd215}{set\+Account\+CreationD}} (Driver \mbox{\hyperlink{structdriver}{driver}}, Date \mbox{\hyperlink{structdate}{date}})
+\begin{DoxyCompactList}\small\item\em Define a data de criação da conta do \#\+Driver. \end{DoxyCompactList}\item 
+Date \mbox{\hyperlink{drivers_8c_a960004935f6e82ce38866570c59159a6}{get\+Driver\+Account\+Creation}} (Driver \mbox{\hyperlink{structdriver}{driver}})
+\begin{DoxyCompactList}\small\item\em Obtém a data de criação da conta de um \#\+Driver. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{drivers_8c_a30ebf9858e9f7212fbdf5ef681382b4c}{valid\+Driver\+Account\+Status}} (char $\ast$as)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que valida a data de criação da conta. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{drivers_8c_a07323de4ac0c4ccbfb8c4ac7bcdeaf12}{set\+Driver\+Account\+Status}} (Driver \mbox{\hyperlink{structdriver}{driver}}, char $\ast$as)
+\begin{DoxyCompactList}\small\item\em Define o estado da conta do \#\+Driver. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{drivers_8c_a0586478991b6df647b985cf35e8696fc}{get\+Driver\+Account\+Status}} (Driver \mbox{\hyperlink{structdriver}{driver}})
+\begin{DoxyCompactList}\small\item\em Obtém o estado da conta de um \#\+Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{drivers_8c_affeeb73142bbb7db222a3bb5f2bce3c9}{set\+Total\+\_\+auferido}} (Driver \mbox{\hyperlink{structdriver}{driver}}, double t)
+\begin{DoxyCompactList}\small\item\em Define o total auferido de um \#\+Driver. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{drivers_8c_a7aa14ba211bda8bd250e79e24825206a}{get\+Total\+\_\+auferido}} (Driver \mbox{\hyperlink{structdriver}{driver}})
+\begin{DoxyCompactList}\small\item\em Obtém o total auferido de um \#\+Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{drivers_8c_a029709dd67e688edf14d33e19f927737}{set\+Sore\+\_\+d}} (Driver \mbox{\hyperlink{structdriver}{driver}}, double t)
+\begin{DoxyCompactList}\small\item\em Define o score total do \#\+Driver. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{drivers_8c_a8f6776e5277df2ec8786beafce6b62e4}{get\+Score\+\_\+d}} (Driver \mbox{\hyperlink{structdriver}{driver}})
+\begin{DoxyCompactList}\small\item\em Obtém o score total do \#\+Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{drivers_8c_ac74531c0da223553ffc5bc1715bdd538}{setn\+\_\+viagensD}} (Driver \mbox{\hyperlink{structdriver}{driver}}, int t)
+\begin{DoxyCompactList}\small\item\em Define o número de viagens do \#\+Driver. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{drivers_8c_a13299bcb80386fde476e24ee439231fb}{getn\+\_\+viagensD}} (Driver \mbox{\hyperlink{structdriver}{driver}})
+\begin{DoxyCompactList}\small\item\em Obtém o número de viagens do \#\+Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{drivers_8c_a1fda6f60ceedc02b2a8db7e144057533}{set\+V\+\_\+recente}} (Driver \mbox{\hyperlink{structdriver}{driver}}, Date \mbox{\hyperlink{structdate}{date}})
+\begin{DoxyCompactList}\small\item\em Define a viagem mais recente do \#\+Driver. \end{DoxyCompactList}\item 
+Date \mbox{\hyperlink{drivers_8c_a4c17629d1901f84a4dac31566b0ce5d0}{get\+V\+\_\+recente}} (Driver \mbox{\hyperlink{structdriver}{driver}})
+\begin{DoxyCompactList}\small\item\em Obtém a viagem mais recente do \#\+Driver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{drivers_8c_a8acbcfa046695704b61305e5e58c6321}{set\+Avaliacao\+\_\+cidade}} (Driver \mbox{\hyperlink{structdriver}{driver}}, double t)
+\begin{DoxyCompactList}\small\item\em Define a avaliação total de um \#\+Driver numa certa cidade. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{drivers_8c_a4083188646caeb8d899d4ecf7e8ad478}{get\+Avaliacao\+\_\+cidade}} (Driver \mbox{\hyperlink{structdriver}{driver}})
+\begin{DoxyCompactList}\small\item\em Obtém a avaliação total de um \#\+Driver numa certa cidade. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{drivers_8c_a67f352b34e3a442c51573095114f1106}{set\+Viagens\+\_\+cidade}} (Driver \mbox{\hyperlink{structdriver}{driver}}, int t)
+\begin{DoxyCompactList}\small\item\em Define o número de viagens de um \#\+Driver numa certa cidade. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{drivers_8c_adfa666194a20e15c8afeb375768cbfe1}{get\+Viagens\+\_\+cidade}} (Driver \mbox{\hyperlink{structdriver}{driver}})
+\begin{DoxyCompactList}\small\item\em Obtém o número de viagens de um \#\+Driver numa certa cidade. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{drivers_8c_a3ccf4e7bb173b467e63b26853fa8d606}{delete\+\_\+driver}} (void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Liberta a memória ocupada por cada campo do Driver (name, car\+\_\+class, license\+\_\+plate, city, account\+\_\+status) e, no fim, ao próprio d. \end{DoxyCompactList}\item 
+Driver \mbox{\hyperlink{drivers_8c_ae65150d0b9fba9a27d0341d42b2df18f}{build\+\_\+driver}} (char $\ast$line)
+\begin{DoxyCompactList}\small\item\em Verifica se um dado \#\+Driver tem todos os parametros válidos. \end{DoxyCompactList}\item 
+DRIVERS\+\_\+\+HT $\ast$ \mbox{\hyperlink{drivers_8c_adefd477e9cd0de90b87ccd99d8ac4e31}{create\+\_\+\+Drivers\+Ht}} (char $\ast$ficheiro\+\_\+entrada)
+\begin{DoxyCompactList}\small\item\em Função que coloca todos os drivers válidos numa hashtable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{drivers_8c_ab6425779d503267d8e362f57c4172185}{delete\+\_\+drivers\+\_\+hash}} (DRIVERS\+\_\+\+HT $\ast$lista)
+\begin{DoxyCompactList}\small\item\em Funcão auxiliar liberta da memória a hashtable dos drivers. \end{DoxyCompactList}\item 
+Driver \mbox{\hyperlink{drivers_8c_ae51375f783c10c2515226e0b44382154}{q1d}} (DRIVERS\+\_\+\+HT $\ast$lista, int id)
+\begin{DoxyCompactList}\small\item\em Função que acede à hastable dos drivers e devolve as informações sobre um condutor a partir do id do mesmo. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{drivers_8c_a01d6d706b3dc2a4d4b045679df8253b6}{carclass}} (DRIVERS\+\_\+\+HT $\ast$lista, int id)
+\begin{DoxyCompactList}\small\item\em Função que acede à hastable dos drivers e devolve as informações sobre um condutor a partir do id do mesmo. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{drivers_8c_a6a5cc67173f0a14ed156e7658dd498c4}{preco\+\_\+class}} (DRIVERS\+\_\+\+HT $\ast$lista2, int id, int d)
+\begin{DoxyCompactList}\small\item\em Função que calcula o preço de uma viagem, com uma certa distância, e com uma certa classe de carro. \end{DoxyCompactList}\item 
+gint \mbox{\hyperlink{drivers_8c_a12ab8443681406f71d505995668e803d}{compara\+\_\+avaliacao\+\_\+media}} (gconstpointer a, gconstpointer b)
+\begin{DoxyCompactList}\small\item\em Função auxiliar que compara dois condutores com base na sua classificação média e na data da sua viagem mais recente. \end{DoxyCompactList}\item 
+gint \mbox{\hyperlink{drivers_8c_a7da4e799aae08e0d62f92e5ee5c7880f}{compara\+\_\+avaliacao\+\_\+media\+\_\+cidade}} (gconstpointer a, gconstpointer b)
+\begin{DoxyCompactList}\small\item\em Funcão auxiliar que compara dois condutores com base na sua classificação média numa cidade específica. \end{DoxyCompactList}\item 
+GList $\ast$ \mbox{\hyperlink{drivers_8c_a71887c1a3dce970177cc08473045c72d}{sort\+\_\+maior\+\_\+avaliacao\+\_\+media}} (DRIVERS\+\_\+\+HT $\ast$table)
+\begin{DoxyCompactList}\small\item\em Funcão auxiliar que transforma a hastable numa lista ligada e ordena-\/a por ordem descrescente de avaliação média. \end{DoxyCompactList}\item 
+GList $\ast$ \mbox{\hyperlink{drivers_8c_a2e84891768f3dbddee952c451bef9c1f}{avaliacao\+\_\+cidade}} (DRIVERS\+\_\+\+HT $\ast$table)
+\begin{DoxyCompactList}\small\item\em Funcão auxiliar que transforma a hastable numa lista ligada e ordena-\/a por ordem descrescente da avaliação média numa determinada cidade. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Este ficheiro contém a struct dos drivers, a função que cria um driver válido e a hashtabel com os drivers válidos 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{drivers_8c_a2e84891768f3dbddee952c451bef9c1f}\label{drivers_8c_a2e84891768f3dbddee952c451bef9c1f}} 
+\index{drivers.c@{drivers.c}!avaliacao\_cidade@{avaliacao\_cidade}}
+\index{avaliacao\_cidade@{avaliacao\_cidade}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{avaliacao\_cidade()}{avaliacao\_cidade()}}
+{\footnotesize\ttfamily GList $\ast$ avaliacao\+\_\+cidade (\begin{DoxyParamCaption}\item[{DRIVERS\+\_\+\+HT $\ast$}]{table }\end{DoxyParamCaption})}
+
+
+
+Funcão auxiliar que transforma a hastable numa lista ligada e ordena-\/a por ordem descrescente da avaliação média numa determinada cidade. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & catálogo (hashtable) dos drivers\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A lista ligada ordenada pela avaliação média numa determinada cidade 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_ae65150d0b9fba9a27d0341d42b2df18f}\label{drivers_8c_ae65150d0b9fba9a27d0341d42b2df18f}} 
+\index{drivers.c@{drivers.c}!build\_driver@{build\_driver}}
+\index{build\_driver@{build\_driver}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{build\_driver()}{build\_driver()}}
+{\footnotesize\ttfamily Driver build\+\_\+driver (\begin{DoxyParamCaption}\item[{char $\ast$}]{line }\end{DoxyParamCaption})}
+
+
+
+Verifica se um dado \#\+Driver tem todos os parametros válidos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & string com os paremetros de um \#\+Driver\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O \#\+Driver caso todos os parametros sejam válidos e NULL caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_a01d6d706b3dc2a4d4b045679df8253b6}\label{drivers_8c_a01d6d706b3dc2a4d4b045679df8253b6}} 
+\index{drivers.c@{drivers.c}!carclass@{carclass}}
+\index{carclass@{carclass}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{carclass()}{carclass()}}
+{\footnotesize\ttfamily char $\ast$ carclass (\begin{DoxyParamCaption}\item[{DRIVERS\+\_\+\+HT $\ast$}]{lista,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Função que acede à hastable dos drivers e devolve as informações sobre um condutor a partir do id do mesmo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) dos drivers \\
+\hline
+{\em id} & id de um driver\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+classe do carro do condutor desejado 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_a12ab8443681406f71d505995668e803d}\label{drivers_8c_a12ab8443681406f71d505995668e803d}} 
+\index{drivers.c@{drivers.c}!compara\_avaliacao\_media@{compara\_avaliacao\_media}}
+\index{compara\_avaliacao\_media@{compara\_avaliacao\_media}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{compara\_avaliacao\_media()}{compara\_avaliacao\_media()}}
+{\footnotesize\ttfamily gint compara\+\_\+avaliacao\+\_\+media (\begin{DoxyParamCaption}\item[{gconstpointer}]{a,  }\item[{gconstpointer}]{b }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que compara dois condutores com base na sua classificação média e na data da sua viagem mais recente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Um pointer para o primeiro condutor.\\
+\hline
+{\em b} & Um pointer para o segundo condutor.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Um número inteiro indicando o resultado da comparação. O valor \texorpdfstring{$>$}{>}0 indica que o segundo condutor tem uma pontuação mais alta e/ou uma viagem mais recente que o primeiro. O valor \texorpdfstring{$<$}{<}0 indica que o primeiro condutor tem uma pontuação mais alta e/ou uma viagem mais recente que o segundo. O valor 0 indica que os condutores são iguais tanto na pontuação quanto na data da viagem mais recente. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_a7da4e799aae08e0d62f92e5ee5c7880f}\label{drivers_8c_a7da4e799aae08e0d62f92e5ee5c7880f}} 
+\index{drivers.c@{drivers.c}!compara\_avaliacao\_media\_cidade@{compara\_avaliacao\_media\_cidade}}
+\index{compara\_avaliacao\_media\_cidade@{compara\_avaliacao\_media\_cidade}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{compara\_avaliacao\_media\_cidade()}{compara\_avaliacao\_media\_cidade()}}
+{\footnotesize\ttfamily gint compara\+\_\+avaliacao\+\_\+media\+\_\+cidade (\begin{DoxyParamCaption}\item[{gconstpointer}]{a,  }\item[{gconstpointer}]{b }\end{DoxyParamCaption})}
+
+
+
+Funcão auxiliar que compara dois condutores com base na sua classificação média numa cidade específica. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Um pointer para o primeiro condutor. \\
+\hline
+{\em b} & Um pointer para o segundo condutor.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Um número inteiro indicando o resultado da comparação. O valor de \texorpdfstring{$>$}{>}0 indica que o segundo condutor tem uma pontuação mais alta na cidade específica do que o primeiro. O valor de \texorpdfstring{$<$}{<}0 indica que o primeiro condutor tem uma pontuação mais alta na cidade específica do que o segundo. O valor de 0 indica que os condutores são iguais na sua pontuação na cidade específica. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_adefd477e9cd0de90b87ccd99d8ac4e31}\label{drivers_8c_adefd477e9cd0de90b87ccd99d8ac4e31}} 
+\index{drivers.c@{drivers.c}!create\_DriversHt@{create\_DriversHt}}
+\index{create\_DriversHt@{create\_DriversHt}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{create\_DriversHt()}{create\_DriversHt()}}
+{\footnotesize\ttfamily DRIVERS\+\_\+\+HT $\ast$ create\+\_\+\+Drivers\+Ht (\begin{DoxyParamCaption}\item[{char $\ast$}]{ficheiro\+\_\+entrada }\end{DoxyParamCaption})}
+
+
+
+Função que coloca todos os drivers válidos numa hashtable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ficheiro\+\_\+entrada} & path para o ficheiro que se vai abrir para ser lido\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+catálogo (hashtable) com todos os drivers 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_a3ccf4e7bb173b467e63b26853fa8d606}\label{drivers_8c_a3ccf4e7bb173b467e63b26853fa8d606}} 
+\index{drivers.c@{drivers.c}!delete\_driver@{delete\_driver}}
+\index{delete\_driver@{delete\_driver}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{delete\_driver()}{delete\_driver()}}
+{\footnotesize\ttfamily void delete\+\_\+driver (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Liberta a memória ocupada por cada campo do Driver (name, car\+\_\+class, license\+\_\+plate, city, account\+\_\+status) e, no fim, ao próprio d. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer \char`\"{}data\char`\"{} associado a um Driver \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{drivers_8c_ab6425779d503267d8e362f57c4172185}\label{drivers_8c_ab6425779d503267d8e362f57c4172185}} 
+\index{drivers.c@{drivers.c}!delete\_drivers\_hash@{delete\_drivers\_hash}}
+\index{delete\_drivers\_hash@{delete\_drivers\_hash}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{delete\_drivers\_hash()}{delete\_drivers\_hash()}}
+{\footnotesize\ttfamily void delete\+\_\+drivers\+\_\+hash (\begin{DoxyParamCaption}\item[{DRIVERS\+\_\+\+HT $\ast$}]{lista }\end{DoxyParamCaption})}
+
+
+
+Funcão auxiliar liberta da memória a hashtable dos drivers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) dos drivers \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{drivers_8c_a4083188646caeb8d899d4ecf7e8ad478}\label{drivers_8c_a4083188646caeb8d899d4ecf7e8ad478}} 
+\index{drivers.c@{drivers.c}!getAvaliacao\_cidade@{getAvaliacao\_cidade}}
+\index{getAvaliacao\_cidade@{getAvaliacao\_cidade}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{getAvaliacao\_cidade()}{getAvaliacao\_cidade()}}
+{\footnotesize\ttfamily double get\+Avaliacao\+\_\+cidade (\begin{DoxyParamCaption}\item[{Driver}]{driver }\end{DoxyParamCaption})}
+
+
+
+Obtém a avaliação total de um \#\+Driver numa certa cidade. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A avaliação total de um \#\+Driver numa certa cidade 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_ae0c1607db6ee857ac835a79c8fd062fd}\label{drivers_8c_ae0c1607db6ee857ac835a79c8fd062fd}} 
+\index{drivers.c@{drivers.c}!getBirthDay@{getBirthDay}}
+\index{getBirthDay@{getBirthDay}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{getBirthDay()}{getBirthDay()}}
+{\footnotesize\ttfamily Date get\+Birth\+Day (\begin{DoxyParamCaption}\item[{Driver}]{driver }\end{DoxyParamCaption})}
+
+
+
+Obtém o dia de aniversário de um \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O dia de aniversário do \#\+Driver 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_a98c99d3aa677207a2cc8729c8313d5cd}\label{drivers_8c_a98c99d3aa677207a2cc8729c8313d5cd}} 
+\index{drivers.c@{drivers.c}!getCarClass@{getCarClass}}
+\index{getCarClass@{getCarClass}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{getCarClass()}{getCarClass()}}
+{\footnotesize\ttfamily char $\ast$ get\+Car\+Class (\begin{DoxyParamCaption}\item[{Driver}]{driver }\end{DoxyParamCaption})}
+
+
+
+Obtém a classe do carro de um \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A classe do carro do \#\+Driver 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_a960004935f6e82ce38866570c59159a6}\label{drivers_8c_a960004935f6e82ce38866570c59159a6}} 
+\index{drivers.c@{drivers.c}!getDriverAccountCreation@{getDriverAccountCreation}}
+\index{getDriverAccountCreation@{getDriverAccountCreation}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{getDriverAccountCreation()}{getDriverAccountCreation()}}
+{\footnotesize\ttfamily Date get\+Driver\+Account\+Creation (\begin{DoxyParamCaption}\item[{Driver}]{driver }\end{DoxyParamCaption})}
+
+
+
+Obtém a data de criação da conta de um \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A data de criação da conta do \#\+Driver 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_a0586478991b6df647b985cf35e8696fc}\label{drivers_8c_a0586478991b6df647b985cf35e8696fc}} 
+\index{drivers.c@{drivers.c}!getDriverAccountStatus@{getDriverAccountStatus}}
+\index{getDriverAccountStatus@{getDriverAccountStatus}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{getDriverAccountStatus()}{getDriverAccountStatus()}}
+{\footnotesize\ttfamily char $\ast$ get\+Driver\+Account\+Status (\begin{DoxyParamCaption}\item[{Driver}]{driver }\end{DoxyParamCaption})}
+
+
+
+Obtém o estado da conta de um \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O estado da conta do \#\+Driver 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_a415974c55fbb9f84a977d7d60741d95d}\label{drivers_8c_a415974c55fbb9f84a977d7d60741d95d}} 
+\index{drivers.c@{drivers.c}!getDriverCity@{getDriverCity}}
+\index{getDriverCity@{getDriverCity}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{getDriverCity()}{getDriverCity()}}
+{\footnotesize\ttfamily char $\ast$ get\+Driver\+City (\begin{DoxyParamCaption}\item[{Driver}]{driver }\end{DoxyParamCaption})}
+
+
+
+Obtém a cidade de um \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A cidade do \#\+Driver 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_a317f3bd199c3ab787f622c1534401147}\label{drivers_8c_a317f3bd199c3ab787f622c1534401147}} 
+\index{drivers.c@{drivers.c}!getDriverGender@{getDriverGender}}
+\index{getDriverGender@{getDriverGender}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{getDriverGender()}{getDriverGender()}}
+{\footnotesize\ttfamily char get\+Driver\+Gender (\begin{DoxyParamCaption}\item[{Driver}]{driver }\end{DoxyParamCaption})}
+
+
+
+Obtém o genero de um \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O genero do \#\+Driver 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_acb304785024fff5215a6d6efba00c1d3}\label{drivers_8c_acb304785024fff5215a6d6efba00c1d3}} 
+\index{drivers.c@{drivers.c}!getDriverName@{getDriverName}}
+\index{getDriverName@{getDriverName}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{getDriverName()}{getDriverName()}}
+{\footnotesize\ttfamily char $\ast$ get\+Driver\+Name (\begin{DoxyParamCaption}\item[{Driver}]{driver }\end{DoxyParamCaption})}
+
+
+
+Obtém o nome de um \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O nome do \#\+Driver 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_acdcfb224553e5b33543a1ce9b8d11ac8}\label{drivers_8c_acdcfb224553e5b33543a1ce9b8d11ac8}} 
+\index{drivers.c@{drivers.c}!getID@{getID}}
+\index{getID@{getID}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily int get\+ID (\begin{DoxyParamCaption}\item[{Driver}]{driver }\end{DoxyParamCaption})}
+
+
+
+Obtém o ID de um \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O ID do \#\+Driver 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_a13299bcb80386fde476e24ee439231fb}\label{drivers_8c_a13299bcb80386fde476e24ee439231fb}} 
+\index{drivers.c@{drivers.c}!getn\_viagensD@{getn\_viagensD}}
+\index{getn\_viagensD@{getn\_viagensD}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{getn\_viagensD()}{getn\_viagensD()}}
+{\footnotesize\ttfamily int getn\+\_\+viagensD (\begin{DoxyParamCaption}\item[{Driver}]{driver }\end{DoxyParamCaption})}
+
+
+
+Obtém o número de viagens do \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de viagens do \#\+Driver 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_a8f6776e5277df2ec8786beafce6b62e4}\label{drivers_8c_a8f6776e5277df2ec8786beafce6b62e4}} 
+\index{drivers.c@{drivers.c}!getScore\_d@{getScore\_d}}
+\index{getScore\_d@{getScore\_d}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{getScore\_d()}{getScore\_d()}}
+{\footnotesize\ttfamily double get\+Score\+\_\+d (\begin{DoxyParamCaption}\item[{Driver}]{driver }\end{DoxyParamCaption})}
+
+
+
+Obtém o score total do \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O score total do \#\+Driver 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_a7aa14ba211bda8bd250e79e24825206a}\label{drivers_8c_a7aa14ba211bda8bd250e79e24825206a}} 
+\index{drivers.c@{drivers.c}!getTotal\_auferido@{getTotal\_auferido}}
+\index{getTotal\_auferido@{getTotal\_auferido}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{getTotal\_auferido()}{getTotal\_auferido()}}
+{\footnotesize\ttfamily double get\+Total\+\_\+auferido (\begin{DoxyParamCaption}\item[{Driver}]{driver }\end{DoxyParamCaption})}
+
+
+
+Obtém o total auferido de um \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O total auferido de um \#\+Driver 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_a4c17629d1901f84a4dac31566b0ce5d0}\label{drivers_8c_a4c17629d1901f84a4dac31566b0ce5d0}} 
+\index{drivers.c@{drivers.c}!getV\_recente@{getV\_recente}}
+\index{getV\_recente@{getV\_recente}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{getV\_recente()}{getV\_recente()}}
+{\footnotesize\ttfamily Date get\+V\+\_\+recente (\begin{DoxyParamCaption}\item[{Driver}]{driver }\end{DoxyParamCaption})}
+
+
+
+Obtém a viagem mais recente do \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A data da viagem mais recente do \#\+Driver 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_adfa666194a20e15c8afeb375768cbfe1}\label{drivers_8c_adfa666194a20e15c8afeb375768cbfe1}} 
+\index{drivers.c@{drivers.c}!getViagens\_cidade@{getViagens\_cidade}}
+\index{getViagens\_cidade@{getViagens\_cidade}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{getViagens\_cidade()}{getViagens\_cidade()}}
+{\footnotesize\ttfamily int get\+Viagens\+\_\+cidade (\begin{DoxyParamCaption}\item[{Driver}]{driver }\end{DoxyParamCaption})}
+
+
+
+Obtém o número de viagens de um \#\+Driver numa certa cidade. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O número de viagens de um \#\+Driver numa certa cidade 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_a6f3069d816d57741b030c85fd95b71b6}\label{drivers_8c_a6f3069d816d57741b030c85fd95b71b6}} 
+\index{drivers.c@{drivers.c}!isDigit@{isDigit}}
+\index{isDigit@{isDigit}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{isDigit()}{isDigit()}}
+{\footnotesize\ttfamily int is\+Digit (\begin{DoxyParamCaption}\item[{char}]{a }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que verifica se um char é um digito. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Um caracter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 se \textquotesingle{}0\textquotesingle{}\texorpdfstring{$<$}{<}=a\texorpdfstring{$<$}{<}=\textquotesingle{}9\textquotesingle{}, 0 caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_a3ed3dc164705cd198d24098596ba2666}\label{drivers_8c_a3ed3dc164705cd198d24098596ba2666}} 
+\index{drivers.c@{drivers.c}!isLetter@{isLetter}}
+\index{isLetter@{isLetter}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{isLetter()}{isLetter()}}
+{\footnotesize\ttfamily int is\+Letter (\begin{DoxyParamCaption}\item[{char}]{a }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que verifica se um char é uma letra. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Um caracter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 se \textquotesingle{}A\textquotesingle{}\texorpdfstring{$<$}{<}=a\texorpdfstring{$<$}{<}=\textquotesingle{}Z\textquotesingle{} ou \textquotesingle{}a\textquotesingle{}\texorpdfstring{$<$}{<}=a\texorpdfstring{$<$}{<}=\textquotesingle{}z\textquotesingle{}, 0 caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_af95e8a76630f5b7d9b949620807c972f}\label{drivers_8c_af95e8a76630f5b7d9b949620807c972f}} 
+\index{drivers.c@{drivers.c}!isValidLicensePlate@{isValidLicensePlate}}
+\index{isValidLicensePlate@{isValidLicensePlate}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{isValidLicensePlate()}{isValidLicensePlate()}}
+{\footnotesize\ttfamily int is\+Valid\+License\+Plate (\begin{DoxyParamCaption}\item[{char $\ast$}]{lp }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que verifica se a matricula é válida. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lp} & Matricula do carro\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna 1 se a matricula for válida e 0 caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_a6a5cc67173f0a14ed156e7658dd498c4}\label{drivers_8c_a6a5cc67173f0a14ed156e7658dd498c4}} 
+\index{drivers.c@{drivers.c}!preco\_class@{preco\_class}}
+\index{preco\_class@{preco\_class}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{preco\_class()}{preco\_class()}}
+{\footnotesize\ttfamily double preco\+\_\+class (\begin{DoxyParamCaption}\item[{DRIVERS\+\_\+\+HT $\ast$}]{lista2,  }\item[{int}]{id,  }\item[{int}]{d }\end{DoxyParamCaption})}
+
+
+
+Função que calcula o preço de uma viagem, com uma certa distância, e com uma certa classe de carro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista2} & catálogo (hashtable) dos drivers \\
+\hline
+{\em id} & id de um driver \\
+\hline
+{\em d} & distância\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+o preço 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_ae51375f783c10c2515226e0b44382154}\label{drivers_8c_ae51375f783c10c2515226e0b44382154}} 
+\index{drivers.c@{drivers.c}!q1d@{q1d}}
+\index{q1d@{q1d}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{q1d()}{q1d()}}
+{\footnotesize\ttfamily Driver q1d (\begin{DoxyParamCaption}\item[{DRIVERS\+\_\+\+HT $\ast$}]{lista,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Função que acede à hastable dos drivers e devolve as informações sobre um condutor a partir do id do mesmo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & catálogo (hashtable) dos drivers \\
+\hline
+{\em id} & id de um driver\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+driver associado ao id dado no input 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_a9bdfe12f007b74a620bff23e925dd215}\label{drivers_8c_a9bdfe12f007b74a620bff23e925dd215}} 
+\index{drivers.c@{drivers.c}!setAccountCreationD@{setAccountCreationD}}
+\index{setAccountCreationD@{setAccountCreationD}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{setAccountCreationD()}{setAccountCreationD()}}
+{\footnotesize\ttfamily void set\+Account\+CreationD (\begin{DoxyParamCaption}\item[{Driver}]{driver,  }\item[{Date}]{date }\end{DoxyParamCaption})}
+
+
+
+Define a data de criação da conta do \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado \\
+\hline
+{\em gndr} & A data de criação da conta do \#\+Driver \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{drivers_8c_a8acbcfa046695704b61305e5e58c6321}\label{drivers_8c_a8acbcfa046695704b61305e5e58c6321}} 
+\index{drivers.c@{drivers.c}!setAvaliacao\_cidade@{setAvaliacao\_cidade}}
+\index{setAvaliacao\_cidade@{setAvaliacao\_cidade}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{setAvaliacao\_cidade()}{setAvaliacao\_cidade()}}
+{\footnotesize\ttfamily void set\+Avaliacao\+\_\+cidade (\begin{DoxyParamCaption}\item[{Driver}]{driver,  }\item[{double}]{t }\end{DoxyParamCaption})}
+
+
+
+Define a avaliação total de um \#\+Driver numa certa cidade. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado \\
+\hline
+{\em t} & A avaliação total de um \#\+Driver numa certa cidade \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{drivers_8c_a6204d640b63bf9ae650f1f6a459689f2}\label{drivers_8c_a6204d640b63bf9ae650f1f6a459689f2}} 
+\index{drivers.c@{drivers.c}!setBirthDay@{setBirthDay}}
+\index{setBirthDay@{setBirthDay}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{setBirthDay()}{setBirthDay()}}
+{\footnotesize\ttfamily void set\+Birth\+Day (\begin{DoxyParamCaption}\item[{Driver}]{driver,  }\item[{Date}]{date }\end{DoxyParamCaption})}
+
+
+
+Define o o dia de aniversário do \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado \\
+\hline
+{\em date} & O dia de aniversário do \#\+Driver \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{drivers_8c_a2fcad9872c169e81dc15e61d01cee2c4}\label{drivers_8c_a2fcad9872c169e81dc15e61d01cee2c4}} 
+\index{drivers.c@{drivers.c}!setCarClass@{setCarClass}}
+\index{setCarClass@{setCarClass}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{setCarClass()}{setCarClass()}}
+{\footnotesize\ttfamily void set\+Car\+Class (\begin{DoxyParamCaption}\item[{Driver}]{driver,  }\item[{char $\ast$}]{cc }\end{DoxyParamCaption})}
+
+
+
+Define classe do carro do \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado \\
+\hline
+{\em gndr} & A classe do carro do \#\+Driver \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{drivers_8c_a07323de4ac0c4ccbfb8c4ac7bcdeaf12}\label{drivers_8c_a07323de4ac0c4ccbfb8c4ac7bcdeaf12}} 
+\index{drivers.c@{drivers.c}!setDriverAccountStatus@{setDriverAccountStatus}}
+\index{setDriverAccountStatus@{setDriverAccountStatus}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{setDriverAccountStatus()}{setDriverAccountStatus()}}
+{\footnotesize\ttfamily void set\+Driver\+Account\+Status (\begin{DoxyParamCaption}\item[{Driver}]{driver,  }\item[{char $\ast$}]{as }\end{DoxyParamCaption})}
+
+
+
+Define o estado da conta do \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado \\
+\hline
+{\em gndr} & O estado da conta do \#\+Driver \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{drivers_8c_a1dc48d510963d4fd06898fd42f05dbaa}\label{drivers_8c_a1dc48d510963d4fd06898fd42f05dbaa}} 
+\index{drivers.c@{drivers.c}!setDriverCity@{setDriverCity}}
+\index{setDriverCity@{setDriverCity}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{setDriverCity()}{setDriverCity()}}
+{\footnotesize\ttfamily void set\+Driver\+City (\begin{DoxyParamCaption}\item[{Driver}]{driver,  }\item[{char $\ast$}]{ct }\end{DoxyParamCaption})}
+
+
+
+Define a cidade do \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado \\
+\hline
+{\em gndr} & A cidade do \#\+Driver \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{drivers_8c_a95661691ec60f74abcb1f801f893bd67}\label{drivers_8c_a95661691ec60f74abcb1f801f893bd67}} 
+\index{drivers.c@{drivers.c}!setDriverGender@{setDriverGender}}
+\index{setDriverGender@{setDriverGender}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{setDriverGender()}{setDriverGender()}}
+{\footnotesize\ttfamily void set\+Driver\+Gender (\begin{DoxyParamCaption}\item[{Driver}]{driver,  }\item[{char}]{gndr }\end{DoxyParamCaption})}
+
+
+
+Define o genero do \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado \\
+\hline
+{\em gndr} & O genero do \#\+Driver \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{drivers_8c_a238a3d8d80489e44aff0972e5bb2fdc1}\label{drivers_8c_a238a3d8d80489e44aff0972e5bb2fdc1}} 
+\index{drivers.c@{drivers.c}!setDriverName@{setDriverName}}
+\index{setDriverName@{setDriverName}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{setDriverName()}{setDriverName()}}
+{\footnotesize\ttfamily void set\+Driver\+Name (\begin{DoxyParamCaption}\item[{Driver}]{driver,  }\item[{char $\ast$}]{nm }\end{DoxyParamCaption})}
+
+
+
+Define o nome do \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado \\
+\hline
+{\em nm} & O nome do \#\+Driver \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{drivers_8c_ae5e2ce48902a574feb4b3823bc251b51}\label{drivers_8c_ae5e2ce48902a574feb4b3823bc251b51}} 
+\index{drivers.c@{drivers.c}!setID@{setID}}
+\index{setID@{setID}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{setID()}{setID()}}
+{\footnotesize\ttfamily void set\+ID (\begin{DoxyParamCaption}\item[{Driver}]{driver,  }\item[{int}]{drvid }\end{DoxyParamCaption})}
+
+
+
+Define o ID do \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado \\
+\hline
+{\em dvrid} & O ID do \#\+Driver \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{drivers_8c_ac74531c0da223553ffc5bc1715bdd538}\label{drivers_8c_ac74531c0da223553ffc5bc1715bdd538}} 
+\index{drivers.c@{drivers.c}!setn\_viagensD@{setn\_viagensD}}
+\index{setn\_viagensD@{setn\_viagensD}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{setn\_viagensD()}{setn\_viagensD()}}
+{\footnotesize\ttfamily void setn\+\_\+viagensD (\begin{DoxyParamCaption}\item[{Driver}]{driver,  }\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Define o número de viagens do \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado \\
+\hline
+{\em t} & O número de viagens do \#\+Driver \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{drivers_8c_a029709dd67e688edf14d33e19f927737}\label{drivers_8c_a029709dd67e688edf14d33e19f927737}} 
+\index{drivers.c@{drivers.c}!setSore\_d@{setSore\_d}}
+\index{setSore\_d@{setSore\_d}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{setSore\_d()}{setSore\_d()}}
+{\footnotesize\ttfamily void set\+Sore\+\_\+d (\begin{DoxyParamCaption}\item[{Driver}]{driver,  }\item[{double}]{t }\end{DoxyParamCaption})}
+
+
+
+Define o score total do \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado \\
+\hline
+{\em t} & O score total do \#\+Driver \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{drivers_8c_affeeb73142bbb7db222a3bb5f2bce3c9}\label{drivers_8c_affeeb73142bbb7db222a3bb5f2bce3c9}} 
+\index{drivers.c@{drivers.c}!setTotal\_auferido@{setTotal\_auferido}}
+\index{setTotal\_auferido@{setTotal\_auferido}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{setTotal\_auferido()}{setTotal\_auferido()}}
+{\footnotesize\ttfamily void set\+Total\+\_\+auferido (\begin{DoxyParamCaption}\item[{Driver}]{driver,  }\item[{double}]{t }\end{DoxyParamCaption})}
+
+
+
+Define o total auferido de um \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado \\
+\hline
+{\em t} & O total auferido do \#\+Driver \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{drivers_8c_a1fda6f60ceedc02b2a8db7e144057533}\label{drivers_8c_a1fda6f60ceedc02b2a8db7e144057533}} 
+\index{drivers.c@{drivers.c}!setV\_recente@{setV\_recente}}
+\index{setV\_recente@{setV\_recente}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{setV\_recente()}{setV\_recente()}}
+{\footnotesize\ttfamily void set\+V\+\_\+recente (\begin{DoxyParamCaption}\item[{Driver}]{driver,  }\item[{Date}]{date }\end{DoxyParamCaption})}
+
+
+
+Define a viagem mais recente do \#\+Driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado \\
+\hline
+{\em date} & A viagem mais recente do \#\+Driver \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{drivers_8c_a67f352b34e3a442c51573095114f1106}\label{drivers_8c_a67f352b34e3a442c51573095114f1106}} 
+\index{drivers.c@{drivers.c}!setViagens\_cidade@{setViagens\_cidade}}
+\index{setViagens\_cidade@{setViagens\_cidade}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{setViagens\_cidade()}{setViagens\_cidade()}}
+{\footnotesize\ttfamily void set\+Viagens\+\_\+cidade (\begin{DoxyParamCaption}\item[{Driver}]{driver,  }\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Define o número de viagens de um \#\+Driver numa certa cidade. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & O \#\+Driver dado \\
+\hline
+{\em t} & O número de viagens de um \#\+Driver numa certa cidade \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{drivers_8c_a71887c1a3dce970177cc08473045c72d}\label{drivers_8c_a71887c1a3dce970177cc08473045c72d}} 
+\index{drivers.c@{drivers.c}!sort\_maior\_avaliacao\_media@{sort\_maior\_avaliacao\_media}}
+\index{sort\_maior\_avaliacao\_media@{sort\_maior\_avaliacao\_media}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{sort\_maior\_avaliacao\_media()}{sort\_maior\_avaliacao\_media()}}
+{\footnotesize\ttfamily GList $\ast$ sort\+\_\+maior\+\_\+avaliacao\+\_\+media (\begin{DoxyParamCaption}\item[{DRIVERS\+\_\+\+HT $\ast$}]{table }\end{DoxyParamCaption})}
+
+
+
+Funcão auxiliar que transforma a hastable numa lista ligada e ordena-\/a por ordem descrescente de avaliação média. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & catálogo (hashtable) dos drivers\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A lista ligada ordenada pela avaliação média 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_a3f8b19a6576922205069a44a577441e8}\label{drivers_8c_a3f8b19a6576922205069a44a577441e8}} 
+\index{drivers.c@{drivers.c}!validCarClass@{validCarClass}}
+\index{validCarClass@{validCarClass}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{validCarClass()}{validCarClass()}}
+{\footnotesize\ttfamily int valid\+Car\+Class (\begin{DoxyParamCaption}\item[{char $\ast$}]{cc }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que verifica se a classe do carro é válida. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cc} & O classe do carro dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 caso o \textquotesingle{}cc\textquotesingle{} seja \char`\"{}\+BASIC\char`\"{} ou \char`\"{}\+PREMIUM\char`\"{} ou \char`\"{}\+GREEN\char`\"{}, 0 caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_a30ebf9858e9f7212fbdf5ef681382b4c}\label{drivers_8c_a30ebf9858e9f7212fbdf5ef681382b4c}} 
+\index{drivers.c@{drivers.c}!validDriverAccountStatus@{validDriverAccountStatus}}
+\index{validDriverAccountStatus@{validDriverAccountStatus}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{validDriverAccountStatus()}{validDriverAccountStatus()}}
+{\footnotesize\ttfamily int valid\+Driver\+Account\+Status (\begin{DoxyParamCaption}\item[{char $\ast$}]{as }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que valida a data de criação da conta. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em as} & A data de criação da conta\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 se \textquotesingle{}as\textquotesingle{} for \char`\"{}\+ACTIVE\char`\"{} ou \char`\"{}\+INACTIVE\char`\"{}, 0 caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{drivers_8c_ac7765fa202c53145998579f681ad9e2b}\label{drivers_8c_ac7765fa202c53145998579f681ad9e2b}} 
+\index{drivers.c@{drivers.c}!validDriverGender@{validDriverGender}}
+\index{validDriverGender@{validDriverGender}!drivers.c@{drivers.c}}
+\doxysubsubsection{\texorpdfstring{validDriverGender()}{validDriverGender()}}
+{\footnotesize\ttfamily int valid\+Driver\+Gender (\begin{DoxyParamCaption}\item[{char}]{gndr }\end{DoxyParamCaption})}
+
+
+
+Função auxiliar que verifica se o género é válido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gndr} & O género dado\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1, caso o \textquotesingle{}gndr\textquotesingle{} seja \char`\"{}\+M\char`\"{} ou \char`\"{}\+F\char`\"{}; 0, caso contrário 
+\end{DoxyReturn}
